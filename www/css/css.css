@@ -1,0 +1,127 @@
+body {background: url('../images/body-bg.jpg') top center repeat-x #FFF}
+
+.left {float: left}
+.right {float: right}
+.clear {clear: both;}
+.wrapper {width: 960px; margin: 0 auto; clear: both}
+.titles {width: 435px; height: 48px; background: url('../images/title-bg.jpg') top center no-repeat; font: 30px/58px 'ChunkFiveRegular'; color: #ebc015; text-shadow: #FFF -1px 1px; text-indent: 34px; margin-top: 30px}
+.titles-full {width:960px; height: 43px; background: url('../images/hr-bg.jpg') top center no-repeat; font: 30px/45px 'ChunkFiveRegular';   color: #ebc015; text-shadow: #FFF -1px 1px; text-indent: 34px; margin-top: 30px;}
+
+/*  Header */
+#header {width: 100%; height: 253px; background: url('../images/header-bg.png') top center no-repeat; margin: 0 auto}
+
+	/* Logo */	
+	#header h1.logo 
+	{background: url('../images/logo.jpg') top center no-repeat; margin: 53px 0 0 0;
+	text-indent: -9999px}
+	#header h1.logo a 
+	{display: block; width: 457px; height: 201px; outline: none}
+	
+	/* Register Button */
+	a.btn-register 
+	{width: 200px; height: 122px; background: url('../images/btn-register.png') top center no-repeat; text-indent: -9999px}
+	a.btn-register:hover 
+	{background: url('../images/btn-register.png') bottom center no-repeat;}
+
+
+	/* Navigation */
+	ul#nav {margin: 80px 0 0 0; padding: 0; list-style: none; width:475px; height: 48px; 
+	background: url('../images/nav-bg.png') top left no-repeat; line-height: 48px;}	
+	ul#nav li {float: left; font: 20px/48px 'ChunkFiveRegular'; text-shadow: #FFF -1px 1px; margin: 0; padding: 0 15px}
+	ul#nav li a {color: #b8b3b2; text-decoration: none; }
+	ul#nav li a:hover {color: #ebc015;}
+
+/* Content */ 
+	
+.content-left {width: 445px; float: left;}
+.content-left p {padding-left: 35px;}
+	p.tx-bg {background: url('../images/tx-bg.jpg') top left no-repeat; padding-left: 100px}
+	
+	/* Schedule Button */
+	a.btn-schedule {width: 409px; height: 62px; background: url('../images/btn-schedule.jpg') top center no-repeat; 
+	display: block; margin: 25px 0 20px 35px; font: 40px/38px 'ChunkFiveRegular'; color: #FFF; 
+	text-shadow: #caa416 -1px 1px; text-align: center; padding: 20px 0  }
+	a.btn-schedule:hover  {background: url('../images/btn-schedule.jpg') bottom center no-repeat;}
+
+
+.content-right {width: 450px; float: right}
+
+	/* Speaker Thumbnail Photos */
+	ul.speaker-photos {list-style: none; margin: 30px 0; padding: 0}
+	ul.speaker-photos li {width: 135px; height: 150px; float:left; margin: 0 22px 20px 0; padding: 0}
+	ul.speaker-photos li:last-child {margin-right: 0}
+		
+		ul.speaker-photos li a {color: #918886;} 
+		ul.speaker-photos li a:hover {color: #111}	
+		
+		/* Speaker Images */
+		ul.speaker-photos li img {width: 122px; height: 122px; border: 3px solid #e5e5e5; margin-left: 6px; position: absolute;
+		filter:alpha(opacity=50); -moz-opacity:0.8; -khtml-opacity: 0.8; opacity: 0.8;}
+		
+		ul.speaker-photos li img:hover  {border: 3px solid #f6ce24; filter:alpha(opacity=50); -moz-opacity:1; -khtml-opacity:1;
+        opacity: 1;}
+        
+        /* Speaker Name */
+		ul.speaker-photos li span {padding: 8px; background: #f6ce24 repeat; position: relative; z-index: 800; top: 122px} 
+	
+	/* Speaker Button */
+	a.btn-speakers {width: 255px; height: 55px; background: url('../images/btn-speakers.jpg') top center no-repeat;
+	display: block; clear: both; float: left; font: 22px/57px 'ChunkFiveRegular'; color: #FFF;
+	text-shadow: #caa416 -1px 1px; text-indent: 18px}
+	a.btn-speakers:hover {background: url('../images/btn-speakers.jpg') bottom center no-repeat;}
+	
+	/* Speaker link */
+	a.link-speak {line-height: 55px;}
+	
+/*Sponsors Area*/
+.column {width: 220px; margin-right: 15px; text-align: center}
+	.column img {border: 0;}
+	.column h5 {color: #ebc015}
+	
+	.column ul {list-style: none; margin: 8px 0}
+	.column ul li {padding: 0; margin: 0 0 5px 0}
+
+.gray-box {background: #f6f6f6; width: 200px; padding: 10px; text-align: left; margin-top: 30px}
+.gray-box:hover {background: #ececec}
+	.gray-box h6 {font: 22px 'ChunkFiveRegular';   color: #ebc015; text-shadow: #FFF -1px 1px; margin: 8px 0 0 0}
+	
+
+/*Footer */
+
+#footer {border-top: solid 32px #f6f6f6; padding-top: 30px; margin: 30px 0;}
+#footer ul {list-style: none;}
+#footer ul li {float: left; margin: 0; padding: 10px 20px; font: 20px/22px 'ChunkFiveRegular'; color: #ebc015; text-shadow: #EFEFEF -1px 1px;}
+#footer ul li a {color: #a19b9a;}
+#footer a:hover {color: #ebc015}
+
+
+
+/* Interior Pages */
+.content-full {margin: 20px auto}
+.content-full h2 {color: #ebc015; font: 30px/58px 'ChunkFiveRegular'; text-shadow: #EFEFEF -1px 1px;}
+.content-full p {padding-left: 0}
+.content-full h3, .content-full h4 {margin-bottom: 0}
+
+	/* Speakers */
+	ul.speaker-list, ul.comm-list {list-style: none; margin: 0; padding: 0}
+	ul.speaker-list li, ul.comm-list li {display: block; margin: 0 0 25px 0; padding: 25px 0; clear: both}
+	ul.speaker-list li:first-child, ul.comm-list li:first-child {padding: 0}
+	
+		/* Speaker Photos */
+		ul.speaker-list li img, ul.comm-list li img {width: 122px; height: 122px; border: 3px solid #e5e5e5; float: left; 
+		margin: 2px 20px 0 0}
+        
+        /* Speaker Name & Bio */
+        ul.speaker-list li div.details, ul.comm-list div.details {float: left; width: 735px}
+        
+        ul.speaker-list li div.details h3, ul.comm-list li div.details h3 
+        {width: 735px; height: 48px; background: url('../images/hr-bg.jpg') top center no-repeat; 
+        font: 26px/48px 'ChunkFiveRegular'; color: #ebc015; text-shadow: #FFF -1px 1px; text-indent: 34px; }
+        
+ 		ul.speaker-list li div.details p, ul.comm-list div.details p {padding-left: 34px}
+    
+    /* Contact Page */
+    ul.camp-brief li {margin-bottom: 15px; list-style-type: square}            
+        
+
+

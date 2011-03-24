@@ -1,0 +1,33 @@
+body{font:12px/1.5 Verdana,Arial,'Liberation Sans',FreeSans,sans-serif; color: #918a89}
+a {color: #e1b007; text-decoration: none;}
+a:hover {color: #111}
+hr{border:0 #ccc solid;border-top-width:1px;clear:both;height:0}
+h1{font-size:30px; font-family: 'ChunkFiveRegular'}
+h2{font-size:26px; font-family: 'ChunkFiveRegular'}
+h3{font-size:24px; font-family: 'ChunkFiveRegular'}
+h4{font-size:26px; font-family: Verdana}
+h5{font-size:14px; font-family: Verdana}
+h6{font-size:12px; font-family: Verdana}
+ol{list-style:decimal}
+ul{list-style:disc}
+li{margin-left:30px}
+p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset{margin-bottom:12px}
+
+::selection {
+        background: #ffef77; /* Safari */
+        }
+::-moz-selection {
+        background: #ffef77; /* Firefox */
+}
+
+@font-face {
+    font-family: 'ChunkFiveRegular';
+    src: url('../font/Chunkfive-webfont.eot');
+    src: url('../font/Chunkfive-webfont.eot?iefix') format('eot'),
+         url('../font/Chunkfive-webfont.woff') format('woff'),
+         url('../font/Chunkfive-webfont.ttf') format('truetype'),
+         url('../font/Chunkfive-webfont.svg#webfont90E2uSjN') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
