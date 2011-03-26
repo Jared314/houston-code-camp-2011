@@ -8,9 +8,11 @@ get '/' do
 end
 
 get '/location' do
-	haml :location, :locals => { :title => "Location" }
+	@title = "Location"
+	haml :location
 end
 
 get '/schedule' do
+	@title = "Schedule"
 	haml :schedule
 end
