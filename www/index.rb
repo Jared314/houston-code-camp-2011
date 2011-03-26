@@ -7,6 +7,10 @@ get '/' do
 	return "Hello World!"
 end
 
+get '/location' do
+	haml :location
+end
+
 get '/schedule' do
 	haml :schedule
 end
