@@ -1,0 +1,5 @@
+== Houston Code Camp 2011 ==
+
+This is the site for Houston Code Camp 2011.  You can view it live at http://houstoncodecamp.com.
+
+The site runs on Sinatra and is deployed on Heroku.
