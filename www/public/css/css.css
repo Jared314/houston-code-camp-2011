@@ -25,7 +25,7 @@ body {background: url('../images/body-bg.jpg') top center repeat-x #FFF}
 
 
 	/* Navigation */
-	ul#nav {margin: 80px 0 0 0; padding: 0; list-style: none; width:475px; height: 48px; 
+	ul#nav {margin: 80px 0 0 0; padding: 0; list-style: none; width:482px; height: 48px; 
 	background: url('../images/nav-bg.png') top left no-repeat; line-height: 48px;}	
 	ul#nav li {float: left; font: 20px/48px 'ChunkFiveRegular'; text-shadow: #FFF -1px 1px; margin: 0; padding: 0 15px}
 	ul#nav li a {color: #b8b3b2; text-decoration: none; }
