@@ -1,2 +1,2 @@
-require File.expand_path(__FILE__, '../www/index')
+require 'app'
 run Sinatra::Application
