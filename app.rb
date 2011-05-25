@@ -15,6 +15,11 @@ get '/speakers' do
   haml :speakers
 end
 
+get '/registration' do
+  @title = "Registration"
+  haml :registration
+end
+
 get '/location' do
 	@title = "Location"
 	haml :location
