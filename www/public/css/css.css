@@ -67,7 +67,7 @@ body {background: url('../images/body-bg.jpg') top center repeat-x #FFF}
 	/* Speaker Button */
 	a.btn-speakers {width: 255px; height: 55px; background: url('../images/btn-speakers.jpg') top center no-repeat;
 	display: block; clear: both; float: left; font: 22px/57px 'ChunkFiveRegular'; color: #FFF;
-	text-shadow: #caa416 -1px 1px; text-indent: 18px}
+	text-shadow: #caa416 -1px 1px; text-indent: 18px; margin: 10px; }
 	a.btn-speakers:hover {background: url('../images/btn-speakers.jpg') bottom center no-repeat;}
 	
 	/* Speaker link */
