@@ -125,3 +125,17 @@ body {background: url('../images/body-bg.jpg') top center repeat-x #FFF}
         
 
 
+/* Sponsors */
+.sponsor-list {}
+
+.sponsor {
+  margin: 15px;
+}
+
+  .sponsor a {
+    display: block;
+    height: 80px;
+  }
+  
+  .sponsor a img {
+  }
