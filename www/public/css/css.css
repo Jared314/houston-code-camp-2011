@@ -25,8 +25,16 @@ body {background: url('../images/body-bg.jpg') top center repeat-x #FFF}
 
 
 	/* Navigation */
-	ul#nav {margin: 80px 0 0 0; padding: 0; list-style: none; width:482px; height: 48px; 
+	
+	/*Registration not yet open*/
+	ul#nav {margin: 206px 0 0 0; padding: 0; list-style: none; width:482px; height: 48px; 
 	background: url('../images/nav-bg.png') top left no-repeat; line-height: 48px;}	
+	
+	/* Activate when registration is open 
+	ul#nav {margin: 80px 0 0 0; padding: 0; list-style: none; width:482px; height: 48px; 
+	background: url('../images/nav-bg.png') top left no-repeat; line-height: 48px;}	*/
+	
+	
 	ul#nav li {float: left; font: 20px/48px 'ChunkFiveRegular'; text-shadow: #FFF -1px 1px; margin: 0; padding: 0 15px}
 	ul#nav li a {color: #b8b3b2; text-decoration: none; }
 	ul#nav li a:hover {color: #ebc015;}
@@ -89,8 +97,8 @@ body {background: url('../images/body-bg.jpg') top center repeat-x #FFF}
 /*Footer */
 
 #footer {border-top: solid 32px #f6f6f6; padding-top: 30px; margin: 30px 0;}
-#footer ul {list-style: none;}
-#footer ul li {float: left; margin: 0; padding: 10px 9px; font: 20px/22px 'ChunkFiveRegular'; color: #ebc015; text-shadow: #EFEFEF -1px 1px;}
+#footer ul {list-style: none; width: 920px; margin: 0; padding: 0}
+#footer ul li {float: left; margin: 0 !important; padding: 10px 9px; font: 20px/22px 'ChunkFiveRegular'; color: #ebc015; text-shadow: #EFEFEF -1px 1px;}
 #footer ul li a {color: #a19b9a;}
 #footer a:hover {color: #ebc015}
 
@@ -101,7 +109,7 @@ body {background: url('../images/body-bg.jpg') top center repeat-x #FFF}
 .content-full h2 {color: #ebc015; font: 30px/58px 'ChunkFiveRegular'; text-shadow: #EFEFEF -1px 1px;}
  /*.content-full p {padding-left: 0}*/
 .content-full h3, .content-full h4 {margin-bottom: 0}
-.content-full ul {margin-left: 40px;}
+/*.content-full ul {margin-left: 40px;}*/
 
 	/* Speakers */
 	ul.speaker-list, ul.comm-list {list-style: none; margin: 0; padding: 0}
