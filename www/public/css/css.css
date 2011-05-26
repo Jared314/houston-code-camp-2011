@@ -67,7 +67,7 @@ body {background: url('../images/body-bg.jpg') top center repeat-x #FFF}
 	/* Speaker Button */
 	a.btn-speakers {width: 255px; height: 55px; background: url('../images/btn-speakers.jpg') top center no-repeat;
 	display: block; clear: both; float: left; font: 22px/57px 'ChunkFiveRegular'; color: #FFF;
-	text-shadow: #caa416 -1px 1px; text-indent: 18px; margin: 10px; }
+	text-shadow: #caa416 -1px 1px; text-indent: 18px; margin: 10px 10px 10px 0; }
 	a.btn-speakers:hover {background: url('../images/btn-speakers.jpg') bottom center no-repeat;}
 	
 	/* Speaker link */
@@ -90,7 +90,7 @@ body {background: url('../images/body-bg.jpg') top center repeat-x #FFF}
 
 #footer {border-top: solid 32px #f6f6f6; padding-top: 30px; margin: 30px 0;}
 #footer ul {list-style: none;}
-#footer ul li {float: left; margin: 0; padding: 10px 20px; font: 20px/22px 'ChunkFiveRegular'; color: #ebc015; text-shadow: #EFEFEF -1px 1px;}
+#footer ul li {float: left; margin: 0; padding: 10px 9px; font: 20px/22px 'ChunkFiveRegular'; color: #ebc015; text-shadow: #EFEFEF -1px 1px;}
 #footer ul li a {color: #a19b9a;}
 #footer a:hover {color: #ebc015}
 
@@ -99,8 +99,9 @@ body {background: url('../images/body-bg.jpg') top center repeat-x #FFF}
 /* Interior Pages */
 .content-full {margin: 20px auto}
 .content-full h2 {color: #ebc015; font: 30px/58px 'ChunkFiveRegular'; text-shadow: #EFEFEF -1px 1px;}
-.content-full p {padding-left: 0}
+ /*.content-full p {padding-left: 0}*/
 .content-full h3, .content-full h4 {margin-bottom: 0}
+.content-full ul {margin-left: 40px;}
 
 	/* Speakers */
 	ul.speaker-list, ul.comm-list {list-style: none; margin: 0; padding: 0}
