@@ -1,12 +1,25 @@
 %h2 Registration
-.content-left
-  %h3 In Brief:
+
+/<div style="width:100%; text-align:left;" ><iframe  src="http://www.eventbrite.com/tickets-external?eid=667119372&ref=etckt" frameborder="0" height="192" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.com/r/etckt" >Event registration</a><span style="color:#ddd;" > for </span><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://houstoncodecamp.eventbrite.com?ref=etckt" >Houston Code Camp 2011</a><span style="color:#ddd;" > powered by </span><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.com?ref=etckt" >Eventbrite</a></div></div>
+
+%iframe{:src=>"http://www.eventbrite.com/tickets-external?eid=667119372&ref=etckt", :frameborder=>"0", :height=>"200", :width=>"100%", :vspace=>"0", :hspace=>"0", :marginheight=>"5", :marginwidth=>"5", :scrolling=>"auto", :allowtransparency=>"true"}
+%div{:style=>"font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;"}
+  %a{:style=>"color:#ddd; text-decoration:none;", :target=>"_blank", :href=>"http://www.eventbrite.com/r/etckt"}
+    Online event registration
+  %span{:style=>"color:#ddd"} for
+  %a{:style=>"color:#ddd; text-decoration:none;", :target=>"_blank", :href=>"http://houstoncodecamp.eventbrite.com?ref=etckt"}
+    Houston Code Camp 2011
+    %span{:style=>"color:#ddd"} powered by
+  %a{:style=>"color:#ddd; text-decoration:none;", :target=>"_blank", :href=>"http://www.eventbrite.com?ref=etckt"}
+    Eventbrite
+
+%div
+  %h3 About the Code Camp
   %p 
     Code Camp Houston is a free day of sessions relating to software development organized by the
-    %a{:href=>"/committee"} ALT.NET Houston group.
+    %a{:href=>"/committee"} Houston Code Camp Comittee.
     %strong 
-      The event is free to attend, but 
-      = "<a href='/registration'>registration</a> is required."
+      The event is free to attend, but registration is required.
     
   %p
     A Code Camp follows these rules:
@@ -28,10 +41,8 @@
         %strong
           All are welcome to attend and speak
         and do so without expectation of payment.  Learn more about speaking on our 
-        %a{:href => "/speaking"} speaking
+        %a{:href => "http://houstoncodecamp.uservoice.com/"} speaking
         page.
         
       %li
         The beauty of the Code Camp is that they always occur on weekends.
-.content-right
-  %h3 Registration coming soon!

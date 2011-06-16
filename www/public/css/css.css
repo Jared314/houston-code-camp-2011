@@ -27,7 +27,7 @@ body {background: url('../images/body-bg.jpg') top center repeat-x #FFF}
 	/* Navigation */
 	
 	/*Registration not yet open*/
-	ul#nav {margin: 206px 0 0 0; padding: 0; list-style: none; width:482px; height: 48px; 
+	ul#nav {margin: 36px 0 0 0; padding: 0; list-style: none; width:482px; height: 48px; 
 	background: url('../images/nav-bg.png') top left no-repeat; line-height: 48px;}	
 	
 	/* Activate when registration is open 
@@ -50,6 +50,13 @@ body {background: url('../images/body-bg.jpg') top center repeat-x #FFF}
 	display: block; margin: 25px 0 20px 35px; font: 40px/38px 'ChunkFiveRegular'; color: #FFF; 
 	text-shadow: #caa416 -1px 1px; text-align: center; padding: 20px 0  }
 	a.btn-schedule:hover  {background: url('../images/btn-schedule.jpg') bottom center no-repeat;}
+
+
+.register a.large-btn {width: 409px; height: 42px; background: url('../images/btn-schedule.jpg') top center no-repeat; 
+	display: block; margin: 45px 0 10px 15px; font: 40px/38px 'ChunkFiveRegular'; color: #FFF; 
+	text-shadow: #caa416 -1px 1px; text-align: center; padding: 20px 0; line-height: 42px;  }
+.register	a.large-btn:hover  {background: url('../images/btn-schedule.jpg') bottom center no-repeat;}
+
 
 
 .content-right {width: 450px; float: right}
@@ -97,7 +104,7 @@ body {background: url('../images/body-bg.jpg') top center repeat-x #FFF}
 /*Footer */
 
 #footer {border-top: solid 32px #f6f6f6; padding-top: 30px; margin: 30px 0;}
-#footer ul {list-style: margin: 0; padding: 0}
+#footer ul {list-style: margin: 0; padding: 0; list-style-type: none;}
 #footer ul li {float: left; margin: 0 !important; padding: 10px 9px; font: 20px/22px 'ChunkFiveRegular'; color: #ebc015; text-shadow: #EFEFEF -1px 1px;}
 #footer ul li a {color: #a19b9a;}
 #footer a:hover {color: #ebc015}

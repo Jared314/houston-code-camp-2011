@@ -14,8 +14,13 @@
   %body
     #header
       .wrapper
-        %h1{:class=>'logo left'}<
+        %h1.logo.left<
           %a{:href=>'/'}= "Code Camp 2011 - Aug 20th - Houston Texas"
+        .right
+          .register
+            %a.large-btn{:href => "/registration"} REGISTER NOW!
+
+        
         %a{:class=>'btn-register right', :href=>'registration', :style=>"display:none"} Register Today
         %ul{:id=>'nav', :class=>'right'}
           %li<
@@ -25,7 +30,7 @@
           %li<
             %a{:href=>"/sponsors"} Sponsors
           %li<
-            %a{:href=>'/location'} Location
+            %a{:href=>'/location'} Location            
     %div{:class=>'wrapper content-full'}
       =yield
       .clear
