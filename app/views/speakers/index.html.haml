@@ -12,11 +12,9 @@
     %li
       .details
         %h3= link_to speaker.name, speaker
-        %p
-          = image_tag "/assets/speaker.jpg"
+        %p= gravatar speaker 
         %p= speaker.bio
         %p
-          Email:
           %a{:href => "mailto:#{speaker.email}"}= speaker.email
         %p
           = link_to "Edit", edit_speaker_path(speaker)
