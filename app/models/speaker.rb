@@ -6,3 +6,4 @@ class Speaker < ActiveRecord::Base
     "#{id}-#{name}".parameterize
   end
 end
+
