@@ -8,5 +8,10 @@
   = f.collection_select :speaker_id, Speaker.all, :id, :name  
   = f.label :abstract
   = f.text_area :abstract, :size => "60x6"
-  %p
-    = f.submit
+
+  .button-row
+    = f.submit "Create Session", :class =>"clean-gray-button"
+    = link_to "Cancel", "javascript:history.go(-1);"
+
+    - unless @session.new_record?
+      = link_to "Delete", @session, :method => "delete", :confirm => "Are you sure?"

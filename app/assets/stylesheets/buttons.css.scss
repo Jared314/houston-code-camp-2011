@@ -1,0 +1,50 @@
+.clean-gray-button {
+  display: block;
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background: -moz-linear-gradient(center top , #EEEEEE 0%, #CCCCCC 100%) repeat scroll 0 0 transparent;
+  border-color: #CCCCCC #CCCCCC #BBBBBB;
+  border-radius: 3px 3px 3px 3px;
+  border-style: solid;
+  border-width: 1px;
+  color: #333333;
+  font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 8px 0;
+  text-align: center;
+  text-shadow: 0 1px 0 #EEEEEE;
+  width: 150px;
+}
+
+
+.clean-gray-button:hover {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: -moz-linear-gradient(center top , #DDDDDD 0%, #BBBBBB 100%) repeat scroll 0 0 transparent;
+    border-color: #BBBBBB #BBBBBB #999999;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    text-shadow: 0 1px 0 #DDDDDD;
+}
+
+.clean-gray-button:active {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #AAAAAA #AAAAAA #888888;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 0 5px 2px #AAAAAA inset, 0 1px 0 0 #EEEEEE;
+}
+
