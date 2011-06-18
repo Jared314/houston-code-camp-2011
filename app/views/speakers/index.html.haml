@@ -1,0 +1,22 @@
+%h2 
+  Spectacular Speakers
+= link_to "New Speaker", new_speaker_path
+%p
+  Did you know that just about anyone can speak? If you would like to contribute to the community and have a topic or an original project you want to break into in front of a live audience,
+  %a{:href => "http://houstoncodecamp.uservoice.com/"} why not submit a talk?
+  %br
+  %a.btn-speakers{:href => "http://houstoncodecamp.uservoice.com/"} Submit a Session!
+  
+%ul.speaker-list
+  - @speakers.each do |speaker|
+    %li
+      .details
+        %h3= link_to speaker.name, speaker
+        %p
+          = image_tag "/assets/speaker.jpg"
+        %p= speaker.bio
+        %p
+          Email:
+          %a{:href => "mailto:#{speaker.email}"}= speaker.email
+        %p
+          = link_to "Edit", edit_speaker_path(speaker)

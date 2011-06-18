@@ -1,0 +1,13 @@
+= form_for @speaker do |f| 
+  = f.error_messages
+
+  = f.label :name
+  = f.text_field :name
+  
+  = f.label :bio
+  = f.text_area :bio, :size => "60x6"
+  
+  = f.label :email
+  = f.text_field :email
+  %p
+    = f.submit

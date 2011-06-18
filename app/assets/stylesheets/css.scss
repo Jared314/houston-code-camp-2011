@@ -157,3 +157,22 @@ body {background: url('/assets/body-bg.jpg') top center repeat-x #FFF}
   
   .sponsor a img {
   }
+
+
+.flash {
+  width: 250px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+}
+
+.flash.error {
+  background-color: #fee;
+  color: #f00;
+}
+
+.flash.notice {
+  background-color: #efe;
+  color: #060;
+}
