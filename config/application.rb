@@ -45,5 +45,12 @@ module HoustonCodeCamp2011
 
     # Enable the asset pipeline
     config.assets.enabled = true
+
+    # Don't generate stub specs for views or helpers
+    config.generators do |g|
+      g.view_specs false
+      g.helper_specs false
+    end
+
   end
 end

@@ -1,6 +1,7 @@
 %h2 Sessions
 
-= link_to 'New session', new_session_path
+- if logged_in?
+  = link_to 'New session', new_session_path
 
 - @sessions.each do |session|
   = render :partial => session

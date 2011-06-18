@@ -11,13 +11,20 @@ gem 'sqlite3'
 gem 'sass'
 gem 'coffee-script'
 gem 'uglifier'
-
 gem 'jquery-rails'
+
 
 gem 'haml'
 gem 'dynamic_form'
+gem 'omniauth'
+
+group :production do
+  gem 'pg'
+end
 
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'rspec-rails'
+  #gem 'capybara-webkit'
 end

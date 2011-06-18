@@ -4,4 +4,5 @@
     %strong 
       = link_to session.speaker.name, session.speaker
   %p= session.abstract
-  = link_to "Edit", edit_session_path(session)
+  - if logged_in?
+    = link_to "Edit", edit_session_path(session)

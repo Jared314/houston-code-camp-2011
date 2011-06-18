@@ -160,6 +160,7 @@ body {background: url('/assets/body-bg.jpg') top center repeat-x #FFF}
 
 
 .flash {
+  display: none;
   width: 250px;
   margin: 10px;
   padding: 10px;
@@ -175,4 +176,12 @@ body {background: url('/assets/body-bg.jpg') top center repeat-x #FFF}
 .flash.notice {
   background-color: #efe;
   color: #060;
+}
+
+a.button {
+  background-color: #888;
+  border: solid 2px #111;
+  padding: 6px;
+  margin: 4px;
+  display: block;
 }

@@ -1,4 +1,6 @@
 class SpeakersController < ApplicationController
+  before_filter :require_user, :except => [:index, :show]
+  
   def index
     @speakers = Speaker.all
   end

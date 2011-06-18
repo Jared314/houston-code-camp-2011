@@ -1,3 +1,6 @@
+# This file handles _conference_ sessions, not _user_ sessions. Make sure you 
+# understand the difference!  User sessions are handled in user_sessions_controller.rb
+
 class SessionsController < ApplicationController
    def new
      @session = Session.new
@@ -35,3 +38,4 @@ class SessionsController < ApplicationController
      @sessions = Session.all
    end
 end
+
