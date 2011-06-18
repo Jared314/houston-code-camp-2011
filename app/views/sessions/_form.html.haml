@@ -1,0 +1,12 @@
+= form_for @session do |f| 
+  = f.error_messages
+
+  = f.label :name
+  = f.text_field :name
+  
+  = f.label :speaker_id
+  = f.collection_select :speaker_id, Speaker.all, :id, :name  
+  = f.label :abstract
+  = f.text_area :abstract, :size => "60x6"
+  %p
+    = f.submit

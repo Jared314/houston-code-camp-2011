@@ -1,0 +1,7 @@
+.session
+  %h3= session.name
+  %p
+    %strong 
+      = link_to session.speaker.name, session.speaker
+  %p= session.abstract
+  = link_to "Edit", edit_session_path(session)

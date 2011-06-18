@@ -1,0 +1,8 @@
+.details
+  %h3= link_to speaker.name, speaker
+  %p= gravatar speaker 
+  %p= speaker.bio
+  %p
+    %a{:href => "mailto:#{speaker.email}"}= speaker.email
+  %p
+    = link_to "Edit", edit_speaker_path(speaker)

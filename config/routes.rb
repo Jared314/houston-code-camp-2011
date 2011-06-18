@@ -1,5 +1,7 @@
 HoustonCodeCamp2011::Application.routes.draw do
 
+  resources :sessions
+
   resources :speakers
 
   match ':action', :controller => "home"
