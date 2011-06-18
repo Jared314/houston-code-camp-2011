@@ -4,5 +4,6 @@
   %p= speaker.bio
   %p
     %a{:href => "mailto:#{speaker.email}"}= speaker.email
-  %p
-    = link_to "Edit", edit_speaker_path(speaker)
+  - if logged_in?
+    %p
+      = link_to "Edit", edit_speaker_path(speaker)
