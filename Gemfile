@@ -19,7 +19,9 @@ gem 'dynamic_form'
 gem 'omniauth'
 gem 'redcarpet'
 
+# Heroku gems
 group :production do
+  gem 'heroku'
   gem 'pg'
   gem 'therubyracer-heroku', '0.8.1.pre3'
 end
