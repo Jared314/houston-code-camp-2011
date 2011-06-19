@@ -132,6 +132,7 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.6)
     rake (0.9.2)
+    redcarpet (1.17.1)
     rest-client (1.6.3)
       mime-types (>= 1.16)
     rspec (2.6.0)
@@ -180,6 +181,7 @@ DEPENDENCIES
   omniauth
   pg
   rails (= 3.1.0.rc1)
+  redcarpet
   rspec-rails
   sass
   sqlite3

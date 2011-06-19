@@ -1,9 +1,7 @@
 .details
   %h3= link_to speaker.name, speaker
-  %p= gravatar speaker 
-  %p= speaker.bio
-  %p
-    %a{:href => "mailto:#{speaker.email}"}= speaker.email
+  .photo= gravatar speaker 
+  .bio= Redcarpet.new(speaker.bio).to_html.html_safe
   - if logged_in?
-    %p
-      = link_to "Edit", edit_speaker_path(speaker)
+    %p.button-row{:style => 'clear:left'}
+      = link_to "Edit", edit_speaker_path(speaker), :class => 'clean-gray-button'

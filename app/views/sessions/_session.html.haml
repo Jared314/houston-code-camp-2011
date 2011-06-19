@@ -3,6 +3,6 @@
   %p
     %strong 
       = link_to session.speaker.name, session.speaker
-  %p= session.abstract
+  %p= Redcarpet.new(session.abstract).to_html
   - if logged_in?
     = link_to "Edit", edit_session_path(session)

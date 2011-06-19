@@ -17,6 +17,7 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'dynamic_form'
 gem 'omniauth'
+gem 'redcarpet'
 
 group :production do
   gem 'pg'
