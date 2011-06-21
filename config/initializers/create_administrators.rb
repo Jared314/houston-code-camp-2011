@@ -1,4 +1,4 @@
-ADMINISTRATORS = ['subdigital', 'pseale', 'jared314']
+ADMINISTRATORS = ['subdigital', 'pseale', 'Jared314']
 
 begin
   ADMINISTRATORS.each do |admin_nickname|
