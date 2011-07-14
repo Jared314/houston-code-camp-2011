@@ -8,9 +8,6 @@
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
 
-
-    %script{:src=>'/assets/Lato-font.js', :type=>'text/javascript'}
-    %script{:src=>'/assets/chunky_400.font.js', :type=>'text/javascript'}
   %body
     #header
       .wrapper
@@ -20,7 +17,6 @@
           - if logged_in?
             = "Logged in as #{current_user.name}"
             = link_to "Logout", signout_path
-          
           .register
             %a.large-btn{:href => "/registration"} REGISTER NOW!
 
