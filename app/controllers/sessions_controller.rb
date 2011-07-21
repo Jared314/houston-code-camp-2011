@@ -3,6 +3,7 @@
 
 class SessionsController < ApplicationController
   before_filter :require_user, :except => [:index, :show]
+
   def new
     @session = Session.new
   end
@@ -32,6 +33,20 @@ class SessionsController < ApplicationController
       flash[:error] = "Bad stuff done happened."
       render :action => "edit"
     end
+  end
+
+  def assign_slot
+    #should be POST-only. TODO never -PDS
+    id = params[:id]
+    @session = Session.find(id)
+    @session.slot_key = params[:key]
+    if @session.save
+      render :json => { success:'true', message:'success'}
+    else
+      render :json => { success:'false', message:"Error saving session #{id}."}
+    end
+  rescue ActiveRecord::RecordNotFound
+      render :json => { success:'false', message:"Could not find session #{id}."}
   end
 
   def index

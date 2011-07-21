@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110618200312) do
+ActiveRecord::Schema.define(:version => 20110721051939) do
 
   create_table "sessions", :force => true do |t|
     t.string   "name"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20110618200312) do
     t.integer  "speaker_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slot_key"
   end
 
   create_table "speakers", :force => true do |t|
