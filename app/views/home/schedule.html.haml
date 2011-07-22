@@ -1,5 +1,90 @@
 %h2 Official Schedule
-%h3 Hang tight!
-%p We are currently working on the schedule of events and will be posting them soon.
+%table.schedule
+  %thead
+    %tr
+      %th 
+      %th Biggest Room #1
+      %th Big Room #1
+      %th Medium-sized Room #1
+      %th Conference Room #1
+      %th Conference Room #2
+      %th Conference Room #3
+  %tbody
+    %tr
+      %td 9:15 - 10:30
+      %td
+        = render_slot "915Biggest1"
+      %td
+        = render_slot "915Big1"
+      %td 
+        = render_slot "915Medium1"
+      %td 
+        = render_slot "915ConferenceRoom1"
+      %td 
+        = render_slot "915ConferenceRoom2"
+      %td 
+        = render_slot "915ConferenceRoom3"
+    
+    %tr
+      %td 10:45 - 12:00
+      %td
+        = render_slot "1045Biggest1"
+      %td
+        = render_slot "1045Big1"
+      %td 
+        = render_slot "1045Medium1"
+      %td 
+        = render_slot "1045ConferenceRoom1"
+      %td 
+        = render_slot "1045ConferenceRoom2"
+      %td 
+        = render_slot "1045ConferenceRoom3"
+    
+    %tr
+      %td 1:15 - 2:30
+      %td
+        = render_slot "115Biggest1"
+      %td
+        = render_slot "115Big1"
+      %td 
+        = render_slot "115Medium1"
+      %td 
+        = render_slot "115ConferenceRoom1"
+      %td 
+        = render_slot "115ConferenceRoom2"
+      %td 
+        = render_slot "115ConferenceRoom3"
+    %tr
+      %td 2:45 - 4:00
+      %td
+        = render_slot "245Biggest1"
+      %td
+        = render_slot "245Big1"
+      %td 
+        = render_slot "245Medium1"
+      %td 
+        = render_slot "245ConferenceRoom1"
+      %td 
+        = render_slot "245ConferenceRoom2"
+      %td 
+        = render_slot "245ConferenceRoom3"
+    %tr
+      %td 4:15 - 5:30
+      %td
+        = render_slot "415Biggest1"
+      %td
+        = render_slot "415Big1"
+      %td 
+        = render_slot "415Medium1"
+      %td 
+        = render_slot "415ConferenceRoom1"
+      %td 
+        = render_slot "415ConferenceRoom2"
+      %td 
+        = render_slot "415ConferenceRoom3"
+
+%div
+  - @unassigned_sessions.each do |s|
+    %div= render_session_block s
 
 %h3= link_to "Click here to see the full session listing", sessions_path
