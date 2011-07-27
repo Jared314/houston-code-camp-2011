@@ -8,3 +8,34 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require_tree .
+
+$().ready(function() {
+   $("div.session").draggable({
+    appendTo: "body",
+    cursor: 'move',
+    helper: "original"
+  });
+
+  $("div.slot").droppable({
+    activeClass: 'dropactive',
+    hoverClass: 'drophover',
+    tolerance: 'pointer',
+    drop: function( event, ui ) {
+      //$( this ).find( ".placeholder" ).remove();
+      // $( "<div class=\"session\"></div>" ).html( ui.draggable.html() ).appendTo( this );
+      $().trigger('sessionSlotted');
+      $.post(
+        '/session/assign',
+        {
+          id:  $(ui.draggable)[0].id, key: $(event.target)[0].id
+          // id: $('.ui-draggable-dragging')[0].id,
+          // slot_key: $('.slot').id
+        }
+        // callback: function() {
+          
+        // });
+    
+      );
+    }
+  });
+});
