@@ -7,11 +7,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 speaker1 = Speaker.create({name:'Peter', email:'peter@pseale.com', bio:'I\'m very important. I have many leather-bound books, and my apartment smells of rich mahogany.'})
 Session.create([ {
+  votes: 2,
   slot_key:'915ConferenceRoom1',
   name:'Script like a neckbeard with PowerShell', 
   abstract:'Learn to script like a true Unix neckbeard! In Windows! This session is hands-on as we walk through common developer/devops scripting tasks. Having witnessed such genius, you will not leave the same. Come prepared like an astronaut and wear adult diapers--you won\'t want to leave for ANY reason!', 
   speaker: speaker1}])
 Session.create([ {
+  votes:35,
   name:'TFS Airing Of Grievances', 
   abstract:'Let it all out! Whether you\'re at wit\'s end dealing with TFS source control, fed up with TFS Build, don\'t like dealing with work items, or just plain angry at ALM--this is the session for you!',
   speaker: speaker1}])

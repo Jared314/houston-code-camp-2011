@@ -1,5 +1,5 @@
 .session{:id => session.id}
-  %h5= session.name
+  %h5= (render_session_name session).html_safe
   %p
     %strong 
       = link_to session.speaker.name, session.speaker
