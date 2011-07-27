@@ -52,5 +52,12 @@ class SessionsController < ApplicationController
   def index
     @sessions = Session.all
   end
+
+  def destroy
+    @session = Session.find(params[:id])
+    @session.destroy
+    flash[:notice] = "#{@session.name} was deleted"
+    redirect_to sessions_path
+  end
 end
 
