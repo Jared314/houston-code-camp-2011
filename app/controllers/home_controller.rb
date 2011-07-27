@@ -16,7 +16,8 @@ class HomeController < ApplicationController
       if session.slot_key == nil
         @unassigned_sessions << session
       else
-        @slots[session.slot_key] = session
+        @slots[session.slot_key] = [] if @slots[session.slot_key] == nil
+        @slots[session.slot_key] << session
       end
     end
   end

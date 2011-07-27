@@ -1,6 +1,6 @@
-%div.slot{:id => slot_key}
+.slot{:id => slot_key}
   - if @slots[slot_key] != nil
-    = render_session_block @slots[slot_key]
+    =(render_all_sessions @slots[slot_key]).html_safe
   - else
     %div{style:'color: #DDD', class:'placeholder'}
       =slot_key
