@@ -18,9 +18,7 @@
             = "Logged in as #{current_user.name}"
             = link_to "Logout", signout_path
           .register
-            %a.large-btn{:href => "/registration"} REGISTER NOW!
-
-        %a{:class=>'btn-register right', :href=>'registration', :style=>"display:none"} Register Today
+            %a.large-btn{:href => "/schedule"} See the schedule!
         %ul{:id=>'nav', :class=>'right'}
           %li<
             %a{:href=>'/speakers'} Speakers

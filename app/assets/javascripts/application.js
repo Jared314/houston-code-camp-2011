@@ -10,7 +10,7 @@
 //= require_tree .
 
 $().ready(function() {
-   $("div.session").draggable({
+   $("div.draggablesession").draggable({
     appendTo: "body",
     cursor: 'move',
     helper: "original"

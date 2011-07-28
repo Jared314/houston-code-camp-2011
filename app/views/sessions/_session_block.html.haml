@@ -1,7 +1,16 @@
-.session{:id => session.id}
-  %h5= (render_session_name session).html_safe
-  %p
-    %strong 
-      = link_to session.speaker.name, session.speaker
-  - if logged_in?
-    = link_to "Edit", edit_session_path(session)
+- if logged_in?
+  .draggablesession{:id => session.id}
+    %h5= (render_session_name session).html_safe
+    %p
+      %strong 
+        = link_to session.speaker.name, session.speaker
+    - if logged_in?
+      = link_to "Edit", edit_session_path(session)
+- else
+  .session{:id => session.id}
+    %h5= (render_session_name session).html_safe
+    %p
+      %strong 
+        = link_to session.speaker.name, session.speaker
+    - if logged_in?
+      = link_to "Edit", edit_session_path(session)
