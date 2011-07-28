@@ -7,6 +7,9 @@
   = f.label :speaker_id
   = f.collection_select :speaker_id, Speaker.all, :id, :name
 
+  = f.label :votes
+  = f.text_field :votes
+
   = f.label :abstract
   = f.text_area :abstract, :size => "60x6"
   %br

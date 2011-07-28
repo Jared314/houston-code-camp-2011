@@ -17,7 +17,7 @@ module SessionsHelper
 
   def render_session_name(session)
     return session.name unless logged_in?
-
+    return session.name if session.votes == nil || session.votes == 0
     return "[#{session.votes.to_s}]#{session.name}"
   end
 end
