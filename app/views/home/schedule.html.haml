@@ -3,12 +3,12 @@
   %thead
     %tr
       %th 
-      %th Biggest Room #1
-      %th Big Room #1
-      %th Medium-sized Room #1
-      %th Conference Room #1
-      %th Conference Room #2
-      %th Conference Room #3
+      %th Apollo
+      %th Challenger
+      %th Discovery
+      %th Atlantis
+      %th Saturn
+      %th Gemini
   %tbody
     %tr
       %td 9:15 - 10:30
@@ -82,9 +82,9 @@
         = render_slot "415ConferenceRoom2"
       %td 
         = render_slot "415ConferenceRoom3"
-
-%div
-  - @unassigned_sessions.each do |s|
-    %div= render_session_block s
+- if logged_in?
+  %div
+    - @unassigned_sessions.each do |s|
+      %div= render_session_block s
 
 %h3= link_to "Click here to see the full session listing", sessions_path
