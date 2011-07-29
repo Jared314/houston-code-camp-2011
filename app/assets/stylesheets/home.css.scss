@@ -18,6 +18,9 @@ table.schedule {
     padding: 10px;
   }
   td {
+    .sessionblock strong a {
+      color: #918A89;
+    } 
     padding: 2px;
   }
 }
