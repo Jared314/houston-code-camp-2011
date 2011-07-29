@@ -14,9 +14,9 @@ $().ready(function() {
     appendTo: "body",
     cursor: 'move',
     helper: "original"
-  });
-
+  });  
   $("div.slot").droppable({
+    accept: 'div.draggablesessionblock',
     activeClass: 'dropactive',
     hoverClass: 'drophover',
     tolerance: 'pointer',
@@ -38,4 +38,15 @@ $().ready(function() {
       );
     }
   });
+
+  $("body").droppable({
+    accept: 'div.draggablesessionblock',
+    tolerance: 'pointer',
+  });
+  $(".unslotted-sessions").draggable({
+    appendTo: "body",
+    cursor: 'move',
+    helper: "original"
+  });
+
 });

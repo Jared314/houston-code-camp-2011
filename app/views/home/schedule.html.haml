@@ -89,9 +89,10 @@
 
 
 - if logged_in?
-  %div{:style => "display: block;"}
+  %div.unslotted-sessions{:style => "height:150px; display: block; clear: both; background: white;"}
     - @unassigned_sessions.each do |s|
       %div= render_session_block s
+    %h3 (unassigned sessions)
 %div{:style => "clear:both;"}
   %h3
     = link_to "Click here to see the full session listing", sessions_path
