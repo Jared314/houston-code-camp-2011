@@ -1,16 +1,19 @@
 - if logged_in?
+  /PDS this is a hack, some day I'll figure out how to do an IF statement in HAML properly. Until then, entirely duplicating this view for logged-in and non-logged-in scenarios.
   .draggablesession{:id => session.id}
-    %h5= (render_session_name session).html_safe
-    %p
-      %strong 
-        = link_to session.speaker.name, session.speaker
+    %strong= (render_session_name session).html_safe
+    from
+    %br
+    = link_to session.speaker.name, session.speaker
     - if logged_in?
+      %br
       = link_to "Edit", edit_session_path(session)
 - else
   .session{:id => session.id}
-    %h5= (render_session_name session).html_safe
-    %p
-      %strong 
-        = link_to session.speaker.name, session.speaker
+    %strong= (render_session_name session).html_safe
+    from
+    %br
+    = link_to session.speaker.name, session.speaker
     - if logged_in?
+      %br
       = link_to "Edit", edit_session_path(session)

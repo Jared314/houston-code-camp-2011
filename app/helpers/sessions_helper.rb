@@ -16,8 +16,8 @@ module SessionsHelper
   end
 
   def render_session_name(session)
-    return session.name unless logged_in?
-    return session.name if session.votes == nil || session.votes == 0
-    return "[#{session.votes.to_s}]#{session.name}"
+    return link_to session.name, session unless logged_in?
+    return link_to session.name, session if session.votes == nil || session.votes == 0
+    return link_to "[#{session.votes.to_s}]#{session.name}", session
   end
 end

@@ -1,87 +1,96 @@
 %h2 Official Schedule
 %table.schedule
-  %thead
-    %tr
-      %th 
-      %th Apollo
-      %th Challenger
-      %th Discovery
-      %th Atlantis
-      %th Saturn
-      %th Gemini
-  %tbody
-    %tr
-      %td 9:15 - 10:30
-      %td
-        = render_slot "915Biggest1"
-      %td
-        = render_slot "915Big1"
-      %td 
-        = render_slot "915Medium1"
-      %td 
-        = render_slot "915ConferenceRoom1"
-      %td 
-        = render_slot "915ConferenceRoom2"
-      %td 
-        = render_slot "915ConferenceRoom3"
-    
-    %tr
-      %td 10:45 - 12:00
-      %td
-        = render_slot "1045Biggest1"
-      %td
-        = render_slot "1045Big1"
-      %td 
-        = render_slot "1045Medium1"
-      %td 
-        = render_slot "1045ConferenceRoom1"
-      %td 
-        = render_slot "1045ConferenceRoom2"
-      %td 
-        = render_slot "1045ConferenceRoom3"
-    
-    %tr
-      %td 1:15 - 2:30
-      %td
-        = render_slot "115Biggest1"
-      %td
-        = render_slot "115Big1"
-      %td 
-        = render_slot "115Medium1"
-      %td 
-        = render_slot "115ConferenceRoom1"
-      %td 
-        = render_slot "115ConferenceRoom2"
-      %td 
-        = render_slot "115ConferenceRoom3"
-    %tr
-      %td 2:45 - 4:00
-      %td
-        = render_slot "245Biggest1"
-      %td
-        = render_slot "245Big1"
-      %td 
-        = render_slot "245Medium1"
-      %td 
-        = render_slot "245ConferenceRoom1"
-      %td 
-        = render_slot "245ConferenceRoom2"
-      %td 
-        = render_slot "245ConferenceRoom3"
-    %tr
-      %td 4:15 - 5:30
-      %td
-        = render_slot "415Biggest1"
-      %td
-        = render_slot "415Big1"
-      %td 
-        = render_slot "415Medium1"
-      %td 
-        = render_slot "415ConferenceRoom1"
-      %td 
-        = render_slot "415ConferenceRoom2"
-      %td 
-        = render_slot "415ConferenceRoom3"
+  %tr
+    %th 
+    %th Apollo
+    %th Challenger
+    %th Discovery
+    %th Atlantis
+    %th Saturn
+    %th Gemini
+  %tr.unusual
+    %td{:colspan => "100"}
+      Registration
+  %tr.sessions
+    %td 9:15 - 10:30
+    %td
+      = render_slot "915Biggest1"
+    %td
+      = render_slot "915Big1"
+    %td 
+      = render_slot "915Medium1"
+    %td 
+      = render_slot "915ConferenceRoom1"
+    %td 
+      = render_slot "915ConferenceRoom2"
+    %td 
+      = render_slot "915ConferenceRoom3"
+  
+  %tr
+    %td 10:45 - 12:00
+    %td
+      = render_slot "1045Biggest1"
+    %td
+      = render_slot "1045Big1"
+    %td 
+      = render_slot "1045Medium1"
+    %td 
+      = render_slot "1045ConferenceRoom1"
+    %td 
+      = render_slot "1045ConferenceRoom2"
+    %td 
+      = render_slot "1045ConferenceRoom3"
+  
+  %tr.unusual
+    %td{:colspan => 7}
+      LUNCH
+  %tr
+    %td 1:15 - 2:30
+    %td
+      = render_slot "115Biggest1"
+    %td
+      = render_slot "115Big1"
+    %td 
+      = render_slot "115Medium1"
+    %td 
+      = render_slot "115ConferenceRoom1"
+    %td 
+      = render_slot "115ConferenceRoom2"
+    %td 
+      = render_slot "115ConferenceRoom3"
+  %tr
+    %td 2:45 - 4:00
+    %td
+      = render_slot "245Biggest1"
+    %td
+      = render_slot "245Big1"
+    %td 
+      = render_slot "245Medium1"
+    %td 
+      = render_slot "245ConferenceRoom1"
+    %td 
+      = render_slot "245ConferenceRoom2"
+    %td 
+      = render_slot "245ConferenceRoom3"
+  %tr
+    %td 4:15 - 5:30
+    %td
+      = render_slot "415Biggest1"
+    %td
+      = render_slot "415Big1"
+    %td 
+      = render_slot "415Medium1"
+    %td 
+      = render_slot "415ConferenceRoom1"
+    %td 
+      = render_slot "415ConferenceRoom2"
+    %td 
+      = render_slot "415ConferenceRoom3"
+  %tr.unusual
+    %td{:colspan => 7}
+      RECONNOITERING
+
+
 - if logged_in?
   %div
     - @unassigned_sessions.each do |s|

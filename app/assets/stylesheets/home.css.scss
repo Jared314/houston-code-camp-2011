@@ -2,6 +2,19 @@
   HOME CONTROLLER STYLES
 */
 table.schedule {
+  width: 800px;
+  tr.unusual td {
+    text-align: center;
+    vertical-align: middle;
+    height: 33px;
+    background: #ebc015;
+    font: 22px/33px 'ChunkFiveRegular'; color: #FFF;
+    text-shadow: #caa416 -1px 1px; text-indent: 18px; margin: 10px 10px 10px 0; 
+  }
+  margin: 20px;
+  background: url('../assets/hr-bg.jpg') top center no-repeat; 
+  background-size: 100%;
+
   th {
     padding: 10px;
   }
@@ -9,7 +22,6 @@ table.schedule {
     padding: 2px;
     height: 100px;
   }
-  border: 1px black solid;
 }
 
 .drophover {

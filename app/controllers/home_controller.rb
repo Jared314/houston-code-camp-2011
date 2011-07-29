@@ -20,5 +20,7 @@ class HomeController < ApplicationController
         @slots[session.slot_key] << session
       end
     end
+
+    @unassigned_sessions.sort! {|a,b| b.votes.to_i <=> a.votes.to_i }
   end
 end
