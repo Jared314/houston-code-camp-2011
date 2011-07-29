@@ -2,7 +2,6 @@
   HOME CONTROLLER STYLES
 */
 table.schedule {
-  width: 800px;
   tr.unusual td {
     text-align: center;
     vertical-align: middle;
@@ -20,7 +19,6 @@ table.schedule {
   }
   td {
     padding: 2px;
-    height: 100px;
   }
 }
 
@@ -30,4 +28,8 @@ table.schedule {
 
 .dropactive {
   border: 1px #ebc015 dashed;
+}
+
+.slot {
+  min-height: 30px;
 }
