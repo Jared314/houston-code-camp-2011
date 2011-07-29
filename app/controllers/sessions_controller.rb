@@ -59,5 +59,12 @@ class SessionsController < ApplicationController
     flash[:notice] = "#{@session.name} was deleted"
     redirect_to sessions_path
   end
+
+  def show
+    @session = Session.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    flash[:error] = "No session found with id #{params[:id]}."
+    redirect_to sessions_path
+  end
 end
 

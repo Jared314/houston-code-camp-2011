@@ -1,4 +1,13 @@
+a.clean-gray-button {
+  padding: 11px 0 0 0;
+  height: 19px;
+  vertical-align: middle;
+}
+
 .clean-gray-button {
+
+  float: left; 
+  margin: 10px;
   display: block;
   -moz-border-bottom-colors: none;
   -moz-border-image: none;
@@ -15,12 +24,11 @@
   font-size: 11px;
   font-weight: bold;
   line-height: 1;
-  padding: 8px 0;
   text-align: center;
   text-shadow: 0 1px 0 #EEEEEE;
   width: 150px;
+  height: 32px;
 }
-
 
 .clean-gray-button:hover {
     -moz-border-bottom-colors: none;
@@ -47,4 +55,3 @@
     border-width: 1px;
     box-shadow: 0 0 5px 2px #AAAAAA inset, 0 1px 0 0 #EEEEEE;
 }
-

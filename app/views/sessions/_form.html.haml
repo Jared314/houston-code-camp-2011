@@ -16,8 +16,8 @@
   %em Markdown supported
 
   .button-row
-    = f.submit "Create Session", :class =>"clean-gray-button", :style => "float: left; margin: 10px;"
-    %button{:onclick => "javascript:history.go(-1);", :class => "clean-gray-button", :style => "float: left; margin: 10px;"} Cancel
+    = f.submit "Create Session", :class =>"clean-gray-button"
+    = link_to "Cancel", "javascript:history.go(-1);", :class => 'clean-gray-button'
 
     - unless @session.new_record?
-      = link_to "Delete", @session, :method => "delete", :confirm => "Are you sure?"
+      = link_to "Delete", @session, :method => "delete", :confirm => "Are you sure?", :class => "clean-gray-button"

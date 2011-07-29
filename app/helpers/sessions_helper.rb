@@ -1,4 +1,4 @@
-module SessionsHelper
+ module SessionsHelper
   def render_slot(slot_key)
     render :partial => "session_slot", :locals => {:slot_key => slot_key}
   end

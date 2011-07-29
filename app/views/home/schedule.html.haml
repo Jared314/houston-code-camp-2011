@@ -92,6 +92,6 @@
   %div{:style => "display: block;"}
     - @unassigned_sessions.each do |s|
       %div= render_session_block s
-%div{:style => "display: block;float: none;"}
+%div{:style => "clear:both;"}
   %h3
     = link_to "Click here to see the full session listing", sessions_path
