@@ -10,10 +10,11 @@
     = gravatar speaker 
     %br
   .bio
-    = Redcarpet.new(speaker.bio).to_html.html_safe
-    - speaker.sessions.each do |session|
-      %br
-      = link_to session.name, session
+    / = Redcarpet.new(speaker.bio).to_html.html_safe
+    %ul.sessions-for-speaker-list
+      - speaker.sessions.each do |session|
+        %li.session-for-speaker
+          = link_to session.name, session
   - if logged_in?
     %p.button-row{:style => 'clear:both'}
       = link_to "Edit", edit_speaker_path(speaker), :class => 'clean-gray-button'
