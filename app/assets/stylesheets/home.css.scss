@@ -8,7 +8,8 @@ table.schedule {
     height: 33px;
     background: #ebc015;
     font: 22px/33px 'ChunkFiveRegular'; color: #FFF;
-    text-shadow: #caa416 -1px 1px; text-indent: 18px; margin: 10px 10px 10px 0; 
+    text-shadow: #caa416 -1px 1px; text-indent: 18px; 
+    margin: 10px 10px 10px 0; 
   }
   margin: 20px;
   background: url('../assets/hr-bg.jpg') top center no-repeat; 
@@ -25,6 +26,14 @@ table.schedule {
       color: #918A89;
     } 
     padding: 2px;
+  }
+
+  tr.sessions-row {
+    border-bottom: 1px #ebc015 solid;
+    td {
+      padding: 4px;
+      vertical-align: middle;
+    }
   }
 }
 

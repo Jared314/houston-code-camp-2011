@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   helper_method :logged_in?, :current_user
 
   def logged_in?
-    return true if Rails.env == 'development' #PDS - I got lazy and didn't want to log into Twitter every time I restarted.
+    return false if Rails.env == 'development' #PDS - I got lazy and didn't want to log into Twitter every time I restarted.
     session[:token].present? && !current_user.nil?
   end
 
