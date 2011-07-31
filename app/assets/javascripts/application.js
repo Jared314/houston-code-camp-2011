@@ -27,7 +27,8 @@ $().ready(function() {
       $.post(
         '/session/assign',
         {
-          id:  $(ui.draggable)[0].id, key: $(event.target)[0].id
+          id:  $(ui.draggable)[0].id, key: $(event.target)[0].id,
+          authenticity_token: window._token
           // id: $('.ui-draggable-dragging')[0].id,
           // slot_key: $('.slot').id
         }
