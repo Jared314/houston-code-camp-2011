@@ -1,6 +1,3 @@
-.slot{:id => slot_key}
-  - if @slots[slot_key] != nil
+.slotty{:id => slot_key}
+  - if @slots[slot_key]
     =(render_all_sessions @slots[slot_key]).html_safe
-  - elsif logged_in?
-    %div{style:'color: #DDD', class:'placeholder'}
-      =slot_key

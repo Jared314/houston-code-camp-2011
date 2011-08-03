@@ -18,13 +18,11 @@ table.schedule {
   th {
     padding: 10px;
   }
-  td {
+  td {    
     .sessionblock strong a {
       color: #918A89;
     } 
-    .draggablesessionblock strong a {
-      color: #918A89;
-    } 
+    
     padding: 2px;
   }
 
@@ -37,8 +35,20 @@ table.schedule {
   }
 }
 
+.draggablesessionblock {
+  cursor: pointer;
+  float: left; 
+  background-color: #eee; 
+  margin: 3px; 
+  padding: 5px; 
+  border:solid 1px #ddd;
+  a {
+    color: #918A89;
+  }
+}
+
 .drophover {
-  background: red;
+  background-color: #f00;
 }
 
 .dropactive {
@@ -46,5 +56,5 @@ table.schedule {
 }
 
 .slot {
-  min-height: 30px;
+  padding:10px;
 }

@@ -1,17 +1,19 @@
 :javascript 
   window._token = '#{form_authenticity_token}'
 %h2 Official Schedule
+
+- @rooms = %W{Apollo Challenger Discovery Atlantis Saturn Gemini}
+
 %table.schedule
   %tr
     %th 
-    %th Apollo
-    %th Challenger
-    %th Discovery
-    %th Atlantis
-    %th Saturn
-    %th Gemini
+    - @rooms.each do |room|
+      %th=room
   %tr.sessions-row
     %td 9:15&nbsp;-&nbsp;10:30
+    
+    - @rooms.each do |room|
+      render_slot room, "915"
     %td
       = render_slot "915Biggest1"
     %td
@@ -45,27 +47,27 @@
       LUNCH
   %tr.sessions-row
     %td 1:15&nbsp;-&nbsp;2:30
-    %td
+    %td.slot
       = render_slot "115Biggest1"
-    %td
+    %td.slot
       = render_slot "115Big1"
-    %td 
+    %td.slot
       = render_slot "115Medium1"
-    %td 
+    %td.slot 
       = render_slot "115ConferenceRoom1"
-    %td 
+    %td.slot
       = render_slot "115ConferenceRoom2"
-    %td 
+    %td.slot 
       = render_slot "115ConferenceRoom3"
   %tr.sessions-row
     %td 2:45&nbsp;-&nbsp;4:00
-    %td
+    %td.slot
       = render_slot "245Biggest1"
-    %td
+    %td.slot
       = render_slot "245Big1"
-    %td 
+    %td.slot
       = render_slot "245Medium1"
-    %td 
+    %td.slot 
       = render_slot "245ConferenceRoom1"
     %td 
       = render_slot "245ConferenceRoom2"
@@ -87,13 +89,13 @@
       = render_slot "415ConferenceRoom3"
   %tr.unusual
     %td{:colspan => 7}
-      RECONNOITERING
+      MINGLING &amp; NETWORKING
 
 
 - if logged_in?
-  %div.unslotted-sessions{:style => "height:150px; display: block; clear: both; background: white;"}
+  %div.unslotted-sessions
     - @unassigned_sessions.each do |s|
-      %div= render_session_block s
+      = render_session_block s
     %h3 (unassigned sessions)
 %div{:style => "clear:both;"}
   %h3

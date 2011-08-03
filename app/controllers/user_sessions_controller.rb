@@ -1,5 +1,11 @@
 class UserSessionsController < ApplicationController
   def new
+    if Rails.env == "development" && params[:auto_login]
+      session[:token] = User.first.token
+      redirect_to root_path, :notice => "Auto logged in!"
+      return
+    end
+    
     redirect_to '/auth/twitter'
   end
 

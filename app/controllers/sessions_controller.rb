@@ -36,7 +36,6 @@ class SessionsController < ApplicationController
   end
 
   def assign_slot
-    #should be POST-only. TODO never -PDS
     id = params[:id]
     @session = Session.find(id)
     @session.slot_key = params[:key]

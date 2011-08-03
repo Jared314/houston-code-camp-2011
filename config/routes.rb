@@ -6,7 +6,8 @@ HoustonCodeCamp2011::Application.routes.draw do
   resources :sessions
 
   #custom session routes
-  match '/session/assign' => 'sessions#assign_slot'
+  match '/session/assign' => 'sessions#assign_slot', :method => :post
+  
   # Authentication routes
   match '/signin'                   => 'user_sessions#new',     :as => :signin
   match '/auth/:provider/callback'  => 'user_sessions#create'

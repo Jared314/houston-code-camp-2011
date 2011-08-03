@@ -9,45 +9,49 @@
 //= require jquery-ui
 //= require_tree .
 
-$().ready(function() {
-   $("div.draggablesessionblock").draggable({
-    appendTo: "body",
-    cursor: 'move',
-    helper: "original"
-  });  
-  $("div.slot").droppable({
-    accept: 'div.draggablesessionblock',
-    activeClass: 'dropactive',
-    hoverClass: 'drophover',
-    tolerance: 'pointer',
-    drop: function( event, ui ) {
-      //$( this ).find( ".placeholder" ).remove();
-      // $( "<div class=\"session\"></div>" ).html( ui.draggable.html() ).appendTo( this );
-      $().trigger('sessionSlotted');
-      $.post(
-        '/session/assign',
-        {
-          id:  $(ui.draggable)[0].id, key: $(event.target)[0].id,
-          authenticity_token: window._token
-          // id: $('.ui-draggable-dragging')[0].id,
-          // slot_key: $('.slot').id
-        }
-        // callback: function() {
-          
-        // });
-    
-      );
-    }
-  });
-
-  $("body").droppable({
-    accept: 'div.draggablesessionblock',
-    tolerance: 'pointer',
-  });
-  $(".unslotted-sessions").draggable({
-    appendTo: "body",
-    cursor: 'move',
-    helper: "original"
-  });
-
-});
+// $().ready(function() {
+//    $("div.draggablesessionblock").draggable({
+//     appendTo: "body",
+//     cursor: 'move',
+//     snap: $(".ui-droppable"),
+//     revert: "invalid",
+//     refreshPositions: true
+//   });  
+//   
+//   $("div.slot").droppable({
+//     accept: 'div.draggablesessionblock',
+//     activeClass: 'dropactive',
+//     hoverClass: 'drophover',
+//     tolerance: 'pointer',
+//     drop: function( event, ui ) {
+//       draggable = $("#" + ui.draggable[0].id);
+//       dropTarget = $(this);
+//       $().trigger('sessionSlotted');
+//       $.ajax({
+//         type: "post",
+//         url: "/session/assign",
+//         data: {
+//           id:  $(ui.draggable)[0].id, 
+//           key: $(event.target)[0].id,
+//           authenticity_token: window._token
+//         },
+//         success: function(e) {  
+//             $(ui.draggable[0]).css("float:none;");
+//           },
+//         error:   function(e) { alert('error'); }
+//       });
+//     }
+//   });
+// 
+//   $("body").droppable({
+//     accept: 'div.draggablesessionblock',
+//     tolerance: 'pointer',
+//   });
+//   
+//   $(".unslotted-sessions").draggable({
+//     appendTo: "body",
+//     cursor: 'move',
+//     helper: "original"
+//   });
+// 
+// });

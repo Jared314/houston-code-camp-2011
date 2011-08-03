@@ -4,7 +4,7 @@
   end
 
   def render_all_sessions(sessions)
-    html = "";
+    html = ""
     sessions.each do |s| 
       html += render_session_block s
     end 
