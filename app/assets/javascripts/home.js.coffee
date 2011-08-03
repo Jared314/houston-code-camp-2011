@@ -2,13 +2,15 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-$ ->
-  $(".draggablesessionblock").draggable({
+draggable_options = {
     appendTo: "body",
     cursor:   "move"
-    snap:     $(".ui-droppable"),
+    #snap:     $(".ui-droppable"),
     revert:   "invalid"
-  })
+}
+
+$ ->
+  $(".draggablesessionblock").draggable draggable_options
   
   $(".slot").droppable({
     accept:       ".draggablesessionblock",
@@ -18,7 +20,6 @@ $ ->
     drop: (event, ui) -> 
       source = $(ui.draggable)[0]
       target = event.target
-      $().trigger("sessionSlotted")
       $.ajax({
         type: "post",
         url:  "/session/assign",
@@ -29,12 +30,11 @@ $ ->
         },
         success: (response) -> 
           if response.success == "true"
-            $(source).css("background-color", '#f00').remove()
+            $(source).css("background-color", '#8985A6').remove()
             $(target).append(source)
             $(source).css({ left:0, top:0, float:"none", position:"inherit" })
             $(source).animate({ backgroundColor:"#eee"}, 500, 'swing')
-            
-            #$(target).append(source).css("float", "none")
+            $(source).draggable(draggable_options )
           else
             alert("Whoops! " + response.message)
         error: (err) -> 

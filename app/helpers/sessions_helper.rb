@@ -1,6 +1,6 @@
  module SessionsHelper
-  def render_slot(slot_key)
-    render :partial => "session_slot", :locals => {:slot_key => slot_key}
+  def render_slot(room, time)
+    render :partial => "session_slot", :locals => {:slot_key => room + time}
   end
 
   def render_all_sessions(sessions)

@@ -13,84 +13,34 @@
     %td 9:15&nbsp;-&nbsp;10:30
     
     - @rooms.each do |room|
-      render_slot room, "915"
-    %td
-      = render_slot "915Biggest1"
-    %td
-      = render_slot "915Big1"
-    %td 
-      = render_slot "915Medium1"
-    %td 
-      = render_slot "915ConferenceRoom1"
-    %td 
-      = render_slot "915ConferenceRoom2"
-    %td 
-      = render_slot "915ConferenceRoom3"
+      =render_slot room, "915"
   
   %tr.sessions-row
     %td 10:45&nbsp;-&nbsp;12:00
-    %td
-      = render_slot "1045Biggest1"
-    %td
-      = render_slot "1045Big1"
-    %td 
-      = render_slot "1045Medium1"
-    %td 
-      = render_slot "1045ConferenceRoom1"
-    %td 
-      = render_slot "1045ConferenceRoom2"
-    %td 
-      = render_slot "1045ConferenceRoom3"
+    - @rooms.each do |room|
+      =render_slot room, "1045"
   
   %tr.unusual
     %td{:colspan => 7}
       LUNCH
   %tr.sessions-row
     %td 1:15&nbsp;-&nbsp;2:30
-    %td.slot
-      = render_slot "115Biggest1"
-    %td.slot
-      = render_slot "115Big1"
-    %td.slot
-      = render_slot "115Medium1"
-    %td.slot 
-      = render_slot "115ConferenceRoom1"
-    %td.slot
-      = render_slot "115ConferenceRoom2"
-    %td.slot 
-      = render_slot "115ConferenceRoom3"
+    - @rooms.each do |room|
+      =render_slot room, "115"
+      
   %tr.sessions-row
     %td 2:45&nbsp;-&nbsp;4:00
-    %td.slot
-      = render_slot "245Biggest1"
-    %td.slot
-      = render_slot "245Big1"
-    %td.slot
-      = render_slot "245Medium1"
-    %td.slot 
-      = render_slot "245ConferenceRoom1"
-    %td 
-      = render_slot "245ConferenceRoom2"
-    %td 
-      = render_slot "245ConferenceRoom3"
+    - @rooms.each do |room|
+      =render_slot room, "245"
+      
   %tr.sessions-row
     %td 4:15&nbsp;-&nbsp;5:30
-    %td
-      = render_slot "415Biggest1"
-    %td
-      = render_slot "415Big1"
-    %td 
-      = render_slot "415Medium1"
-    %td 
-      = render_slot "415ConferenceRoom1"
-    %td 
-      = render_slot "415ConferenceRoom2"
-    %td 
-      = render_slot "415ConferenceRoom3"
+    - @rooms.each do |room|
+      =render_slot room, "415"
+      
   %tr.unusual
     %td{:colspan => 7}
       MINGLING &amp; NETWORKING
-
 
 - if logged_in?
   %div.unslotted-sessions
