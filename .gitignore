@@ -5,3 +5,4 @@ tmp/
 .sass-cache/
 config/twitter.yml
 db/seeds.rb
+.DS_Store

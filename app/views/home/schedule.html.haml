@@ -9,38 +9,52 @@
     %th 
     - @rooms.each do |room|
       %th=room
+      
+  %tr.unusual
+    %td{:colspan => 7}
+      8:00 - 9:00 REGISTRATION &amp; BREAKFAST
+
   %tr.sessions-row
-    %td 9:15&nbsp;-&nbsp;10:30
+    %td 9:00 - 9:15 
+    %td{:colspan => 6, :style => "padding: 15px 0px; background-color: #fdfdfd; text-align:center; font-weight: bold"}
+      Opening Announcements
+
+  %tr.sessions-row
+    %td{:nowrap=>"true"} 9:15 - 10:30
     
     - @rooms.each do |room|
       =render_slot room, "915"
   
   %tr.sessions-row
-    %td 10:45&nbsp;-&nbsp;12:00
+    %td{:nowrap=>"true"} 10:45 - 12:00
     - @rooms.each do |room|
       =render_slot room, "1045"
   
   %tr.unusual
     %td{:colspan => 7}
-      LUNCH
+      12:00 - 1:00 LUNCH
   %tr.sessions-row
-    %td 1:15&nbsp;-&nbsp;2:30
+    %td{:nowrap=>"true"} 1:15&nbsp;-&nbsp;2:30
     - @rooms.each do |room|
       =render_slot room, "115"
       
   %tr.sessions-row
-    %td 2:45&nbsp;-&nbsp;4:00
+    %td{:nowrap=>"true"} 2:45&nbsp;-&nbsp;4:00
     - @rooms.each do |room|
       =render_slot room, "245"
       
   %tr.sessions-row
-    %td 4:15&nbsp;-&nbsp;5:30
+    %td{:nowrap=>"true"} 4:15&nbsp;-&nbsp;5:30
     - @rooms.each do |room|
       =render_slot room, "415"
       
+  %tr.sessions-row
+  %td{:nowrap=>true} 5:30 - 6:15 
+  %td{:colspan => 6, :style => "padding: 15px 0px; background-color: #fdfdfd; text-align:center; font-weight: bold"}
+    Closing Announcements &amp; Giveaways
   %tr.unusual
     %td{:colspan => 7}
-      MINGLING &amp; NETWORKING
+      6:15 - 6:30 MINGLING &amp; NETWORKING
 
 - if logged_in?
   %div.unslotted-sessions
