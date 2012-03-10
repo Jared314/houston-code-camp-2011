@@ -29,7 +29,7 @@ gem 'redcarpet'
 group :production do
   gem 'heroku'
   gem 'pg'
-  gem 'therubyracer-heroku', '0.8.1.pre3'
+  #gem 'therubyracer-heroku', '0.8.1.pre3'
 end
 
 group :test do
@@ -38,4 +38,5 @@ group :test do
   gem 'turn', :require => false
   gem 'rspec-rails'
   #gem 'capybara-webkit'
+  gem 'rake'
 end
