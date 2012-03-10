@@ -4,3 +4,5 @@ rvm:
   - 1.9.3
 env:
   - twitter_key=foo twitter_secret=bar
+before_script:
+  - "bundle exec rake db:migrate"
