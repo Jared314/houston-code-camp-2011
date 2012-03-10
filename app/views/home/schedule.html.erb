@@ -1,5 +1,6 @@
-:javascript 
-  window._token = '#{form_authenticity_token}'
+<script type="text/javascript ">
+  window._token = '<%=form_authenticity_token %>'
+</script>
 <h2>Official Schedule</h2>
 
 <% @rooms = %W{Apollo Challenger Discovery Atlantis Gemini} %>
