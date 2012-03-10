@@ -1,0 +1,26 @@
+<%= form_for @session do |f| %>
+  <%= f.error_messages %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :speaker_id %>
+  <%= f.collection_select :speaker_id, Speaker.all, :id, :name %>
+
+  <%= f.label :votes %>
+  <%= f.text_field :votes %>
+
+  <%= f.label :abstract %>
+  <%= f.text_area :abstract, :size => "60x6" %>
+  <br />
+  <em>Markdown supported</em>
+
+  <div class="button-row">
+    <%= f.submit "Create Session", :class =>"clean-gray-button" %>
+    <%= link_to "Cancel", "javascript:history.go(-1);", :class => 'clean-gray-button' %>
+
+    <% unless @session.new_record? %>
+      <%= link_to "Delete", @session, :method => "delete", :confirm => "Are you sure?", :class => "clean-gray-button" %>
+    <% end %>
+  </div>
+<% end %>
