@@ -1,15 +1,15 @@
-%h2 
-  Spectacular Speakers
-  
-- if logged_in?
-  = link_to "New Speaker", new_speaker_path, :class => "clean-gray-button"
-/ %p
+<h2>Spectacular Speakers</h2>
+<% if logged_in? %>
+  <%= link_to "New Speaker", new_speaker_path, :class => "clean-gray-button" %>
+<% end %>
+<!-- %p
 /   Did you know that just about anyone can speak? If you would like to contribute to the community and have a topic or an original project you want to break into in front of a live audience,
 /   %a{:href => "http://houstoncodecamp.uservoice.com/"} why not submit a talk?
 /   %br
 /   %a.btn-speakers{:href => "http://houstoncodecamp.uservoice.com/"} Submit a Session!
-  
-%ul.speaker-list
-  - @speakers.each do |speaker|
-    %li
-      = render :partial => speaker
+-->
+<ul class="speaker-list">
+  <% @speakers.each do |speaker| %>
+    <li><%= render :partial => speaker %></li>
+  <% end %>
+</ul>
