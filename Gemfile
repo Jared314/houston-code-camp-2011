@@ -2,7 +2,11 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.2'
 
-gem 'sqlite3'
+group :development, :test do
+  gem 'sqlite3'
+end
+
+gem 'thin'
 
 # Asset template engines
 gem 'sass'
@@ -14,6 +18,7 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'dynamic_form'
 gem 'omniauth'
+gem 'omniauth-twitter'
 gem 'redcarpet'
 
 # Heroku gems
