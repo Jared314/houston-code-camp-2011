@@ -8,11 +8,15 @@ end
 
 gem 'thin'
 
-# Asset template engines
-gem 'sass'
-gem 'coffee-script'
-gem 'uglifier'
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails',   '~> 3.1.5.rc.2'
+  gem 'coffee-rails', '~> 3.1.1'
+  gem 'uglifier', '>= 1.0.3'
+end
 gem 'jquery-rails'
+
 
 
 gem 'haml'
@@ -29,6 +33,7 @@ group :production do
 end
 
 group :test do
+
   # Pretty printed test output
   gem 'turn', :require => false
   gem 'rspec-rails'
