@@ -1,66 +1,75 @@
 :javascript 
   window._token = '#{form_authenticity_token}'
-%h2 Official Schedule
+<h2>Official Schedule</h2>
 
-- @rooms = %W{Apollo Challenger Discovery Atlantis Gemini}
+<% @rooms = %W{Apollo Challenger Discovery Atlantis Gemini} %>
 
-%table.schedule
-  %tr
-    %th 
-    - @rooms.each do |room|
-      %th=room
-      
-  %tr.unusual
-    %td{:colspan => 7}
-      8:00 - 9:00 REGISTRATION &amp; BREAKFAST
-
-  %tr.sessions-row
-    %td 9:00 - 9:15 
-    %td{:colspan => 6, :style => "padding: 15px 0px; background-color: #fdfdfd; text-align:center; font-weight: bold"}
+<table class="schedule">
+  <tr>
+    <th></th> 
+    <% @rooms.each do |room| %>
+      <th><%=room %></th>
+    <% end %>
+  </tr>    
+  <tr class="unusual">
+    <td colspan="7">8:00 - 9:00 REGISTRATION &amp; BREAKFAST</td>
+  </tr>
+  <tr class="sessions-row">
+    <td>9:00 - 9:15</td>
+    <td colspan="6" style="padding: 15px 0px; background-color: #fdfdfd; text-align:center; font-weight: bold">
       Opening Announcements
-
-  %tr.sessions-row
-    %td{:nowrap=>"true"} 9:15 - 10:30
-    
-    - @rooms.each do |room|
-      =render_slot room, "915"
-  
-  %tr.sessions-row
-    %td{:nowrap=>"true"} 10:45 - 12:00
-    - @rooms.each do |room|
-      =render_slot room, "1045"
-  
-  %tr.unusual
-    %td{:colspan => 7}
-      12:00 - 1:00 LUNCH
-  %tr.sessions-row
-    %td{:nowrap=>"true"} 1:15&nbsp;-&nbsp;2:30
-    - @rooms.each do |room|
-      =render_slot room, "115"
-      
-  %tr.sessions-row
-    %td{:nowrap=>"true"} 2:45&nbsp;-&nbsp;4:00
-    - @rooms.each do |room|
-      =render_slot room, "245"
-      
-  %tr.sessions-row
-    %td{:nowrap=>"true"} 4:15&nbsp;-&nbsp;5:30
-    - @rooms.each do |room|
-      =render_slot room, "415"
-      
-  %tr.sessions-row
-  %td{:nowrap=>true} 5:30 - 6:30 
-  %td{:colspan => 6, :style => "padding: 15px 0px; background-color: #fdfdfd; text-align:center; font-weight: bold"}
-    Closing Announcements &amp; Giveaways
-  %tr.unusual
-    %td{:colspan => 7}
-      6:30 - 7:30 CHAIONE SPONSORED HAPPY HOUR
-
-- if logged_in?
-  %div.unslotted-sessions
-    - @unassigned_sessions.each do |s|
-      = render_session_block s
-    %h3 (unassigned sessions)
-%div{:style => "clear:both;"}
-  %h3
-    = link_to "Click here to see the full session listing", sessions_path
+    </td>
+  </tr>
+  <tr class="sessions-row">
+    <td nowrap>9:15 - 10:30</td>
+    <% @rooms.each do |room| %>
+      <%=render_slot room, "915" %>
+    <% end %>
+  </tr>
+  <tr class="sessions-row">
+    <td nowrap>10:45 - 12:00</td>
+    <% @rooms.each do |room| %>
+      <%=render_slot room, "1045" %>
+    <% end %>
+  </tr>
+  <tr class="unusual">
+    <td colspan="7">12:00 - 1:00 LUNCH</td>
+  </tr>
+  <tr class="sessions-row">
+    <td nowrap>1:15&nbsp;-&nbsp;2:30</td>
+    <% @rooms.each do |room| %>
+      <%=render_slot room, "115" %>
+    <% end %>
+  </tr>
+  <tr class="sessions-row">
+    <td nowrap>2:45&nbsp;-&nbsp;4:00</td>
+    <% @rooms.each do |room| %>
+      <%=render_slot room, "245" %>
+    <% end %>
+  </tr>
+  <tr class="sessions-row">
+    <td nowrap>4:15&nbsp;-&nbsp;5:30</td>
+    <% @rooms.each do |room| %>
+      <%=render_slot room, "415" %>
+    <% end %>
+  </tr>
+  <tr class="sessions-row">
+    <td nowrap> 5:30 - 6:30</td>
+    <td colspan="6" style="padding: 15px 0px; background-color: #fdfdfd; text-align:center; font-weight: bold">
+      Closing Announcements &amp; Giveaways
+    </td>
+  </tr>
+  <tr class="unusual">
+    <td colspan="7">6:30 - 7:30 CHAIONE SPONSORED HAPPY HOUR</td>
+  </tr>
+</table>
+<% if logged_in? %>
+  <div class="unslotted-sessions">
+    <% @unassigned_sessions.each do |s| %>
+    <%= render_session_block s %>
+    <% end %>
+    <h3>(unassigned sessions)</h3>
+<% end %>
+<div style="clear:both;">
+  <h3><%= link_to "Click here to see the full session listing", sessions_path %></h3>
+</div>
