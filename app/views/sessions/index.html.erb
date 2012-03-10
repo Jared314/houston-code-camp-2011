@@ -1,0 +1,8 @@
+<h2>Sessions</h2>
+
+<% if logged_in? %>
+  <%= link_to 'New session', new_session_path, :class => "clean-gray-button" %>
+<% end %>
+<% @sessions.each do |session| %>
+  <%= render :partial => session %>
+<% end %>

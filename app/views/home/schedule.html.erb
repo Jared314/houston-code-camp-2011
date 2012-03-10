@@ -1,0 +1,76 @@
+<script type="text/javascript ">
+  window._token = '<%=form_authenticity_token %>'
+</script>
+<h2>Official Schedule</h2>
+
+<% @rooms = %W{Apollo Challenger Discovery Atlantis Gemini} %>
+
+<table class="schedule">
+  <tr>
+    <th></th> 
+    <% @rooms.each do |room| %>
+      <th><%=room %></th>
+    <% end %>
+  </tr>    
+  <tr class="unusual">
+    <td colspan="7">8:00 - 9:00 REGISTRATION &amp; BREAKFAST</td>
+  </tr>
+  <tr class="sessions-row">
+    <td>9:00 - 9:15</td>
+    <td colspan="6" style="padding: 15px 0px; background-color: #fdfdfd; text-align:center; font-weight: bold">
+      Opening Announcements
+    </td>
+  </tr>
+  <tr class="sessions-row">
+    <td nowrap>9:15 - 10:30</td>
+    <% @rooms.each do |room| %>
+      <%=render_slot room, "915" %>
+    <% end %>
+  </tr>
+  <tr class="sessions-row">
+    <td nowrap>10:45 - 12:00</td>
+    <% @rooms.each do |room| %>
+      <%=render_slot room, "1045" %>
+    <% end %>
+  </tr>
+  <tr class="unusual">
+    <td colspan="7">12:00 - 1:00 LUNCH</td>
+  </tr>
+  <tr class="sessions-row">
+    <td nowrap>1:15&nbsp;-&nbsp;2:30</td>
+    <% @rooms.each do |room| %>
+      <%=render_slot room, "115" %>
+    <% end %>
+  </tr>
+  <tr class="sessions-row">
+    <td nowrap>2:45&nbsp;-&nbsp;4:00</td>
+    <% @rooms.each do |room| %>
+      <%=render_slot room, "245" %>
+    <% end %>
+  </tr>
+  <tr class="sessions-row">
+    <td nowrap>4:15&nbsp;-&nbsp;5:30</td>
+    <% @rooms.each do |room| %>
+      <%=render_slot room, "415" %>
+    <% end %>
+  </tr>
+  <tr class="sessions-row">
+    <td nowrap> 5:30 - 6:30</td>
+    <td colspan="6" style="padding: 15px 0px; background-color: #fdfdfd; text-align:center; font-weight: bold">
+      Closing Announcements &amp; Giveaways
+    </td>
+  </tr>
+  <tr class="unusual">
+    <td colspan="7">6:30 - 7:30 CHAIONE SPONSORED HAPPY HOUR</td>
+  </tr>
+</table>
+<% if logged_in? %>
+  <div class="unslotted-sessions">
+    <% @unassigned_sessions.each do |s| %>
+    <%= render_session_block s %>
+    <% end %>
+    <h3>(unassigned sessions)</h3>
+<% end %>
+<div style="clear:both;">
+  <h3><%= link_to "Click here to see the full session listing", sessions_path %></h3>
+</div>

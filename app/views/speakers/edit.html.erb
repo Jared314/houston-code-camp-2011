@@ -1,0 +1,7 @@
+<h2>Editing a Speaker</h2>
+
+<%= gravatar @speaker %>
+
+<%= render :partial => "form" %>
+
+<%= link_to "Delete Speaker", @speaker, :method => :delete, :confirm => "Are you sure?", :class => 'clean-gray-button' %>
