@@ -4,6 +4,6 @@ rvm:
 env:
   - twitter_key=foo twitter_secret=bar
 before_script:
-  - "bundle exec rake db:test:prepare"
+  - "bundle exec rake db:migrate"
 script:
   - "bundle exec rake spec"
