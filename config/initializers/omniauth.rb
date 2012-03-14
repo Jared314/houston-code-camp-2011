@@ -1,13 +1,12 @@
 require 'yaml'
 
-
 def twitter_auth_keys_from_env
   return ENV['twitter_key'], ENV['twitter_secret']
 end
 
 def twitter_auth_keys
   local_yaml_path = File.expand_path('../../twitter.yml', __FILE__)
-  puts local_yaml_path
+  #puts local_yaml_path
   if File.exists?(local_yaml_path)
     Rails.logger.info "Reading twitter auth keys from twitter.yml"
     yaml = YAML.load_file(local_yaml_path)
