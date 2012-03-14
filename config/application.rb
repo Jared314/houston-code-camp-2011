@@ -45,6 +45,7 @@ module HoustonCodeCamp2011
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    config.assets.initialize_on_precompile = false
 
     # Don't generate stub specs for views or helpers
     config.generators do |g|
