@@ -53,47 +53,18 @@
         <div class="column left">
           <h5>Gold</h5>
           <ul>
-            <li>
-<%#              <a href="http://www.microsoft.com" target="_blank">
-                <img alt="Microsoft" src="/assets/sponsor.jpg">
-              </a> %>
-            </li>
-            <li>
-<%#              <a href="http://www.headspring.com" target="_blank">
-                <img alt="Headspring" src="/assets/headspring.jpg">
-              </a> %>
-            </li>
-            <li>
-<%#              <a href="http://componentone.com" target="_blank">
-                <img alt="ComponentOne" src="/assets/componentone.jpg">
-              </a> %>
-            </li>
+<% @sponsors.find_all{|item| item.level == :gold }.each do |item| %>
+            <li><%=link_to image_tag(item.image_path, :alt=>item.name), item.url, :target => '_blank' %></li>
+<% end %>
           </ul>
         </div>
         <!-- .column -->
         <div class="column left">
           <h5>Silver</h5>
           <ul>
-            <li>
-<%#              <a href="http://www.telerik.com" target="_blank">
-                <img alt="Telerik" src="./assets/telerik.png">
-              </a> %>
-            </li>
-            <li>
-<%#              <a href="http://www.tekpub.com" target="_blank">
-                <img alt="Tekpub" src="./assets/tekpub.jpeg">
-              </a> %>
-            </li>
-            <li>
-<%#              <a href="http://www.pluralsight.com" target="_blank">
-                <img alt="Pluralsight" src="./assets/pluralsight.png">
-              </a> %>
-            </li>
-            <li>
-<%#              <a href="http://snapstream.com" target="_blank">
-                <img alt="SnapStream TV Search" src="/assets/snapstream.png">
-              </a> %>
-            </li>
+<% @sponsors.find_all{|item| item.level == :silver }.each do |item| %>
+            <li><%=link_to image_tag(item.image_path, :alt=>item.name), item.url, :target => '_blank' %></li>
+<% end %>
           </ul>
         </div>
         <!-- .column -->
@@ -107,70 +78,8 @@
       </div>
       <div class="clear"></div>
       <h4 class="titles-full">Special Thanks To</h4>
-      <div class="column left">
-        <ul>
-          <li>
-<%#            <a href="http://github.com" target="_blank">
-              <img alt="Github" src="/assets/github.png">
-            </a> %>
-          </li>
-        </ul>
-      </div>
-      <div class="column left">
-        <ul>
-          <li>
-<%#            <a href="http://pragprog.com" target="_blank">
-              <img alt="The Pragmatic Bookshelf" src="/assets/pragprog.png">
-            </a> %>
-          </li>
-        </ul>
-      </div>
-      <div class="column left">
-        <ul>
-          <li>
-<%#            <a href="http://codeschool.com" target="_blank">
-              <img alt="Code School" src="/assets/code_school.png">
-            </a> %>
-          </li>
-        </ul>
-      </div>
-      <div class="column left">
-        <ul>
-          <li>
-<%#            <a href="http://oreilly.com" target="_blank">
-              <img alt="O'Reilly" src="/assets/oreilly.png">
-            </a> %>
-          </li>
-        </ul>
-      </div>
-      <br style="clear: left">
-      <div class="column left">
-        <ul>
-          <li>
-<%#            <a href="http://manning.com" target="_blank">
-              <img alt="Manning Publications" src="/assets/manning.png">
-            </a> %>
-          </li>
-        </ul>
-      </div>
-      <div class="column left">
-        <ul>
-          <li>
-<%#            <a href="http://chaione.com" target="_blank">
-              <img alt="ChaiONE" src="/assets/chaione.png">
-            </a> %>
-          </li>
-        </ul>
-      </div>
-      <div class="column left">
-        <ul>
-          <li>
-<%#            <a href="http://logicnp.com" target="_blank">
-              <img alt="Logic NP Software" src="/assets/logicnp.jpeg">
-            </a> %>
-          </li>
-        </ul>
-      </div>
-      <div class="column left">
-        <ul></ul>
-      </div>
+<% @sponsors.find_all{|item| item.level == :special }.each do |item| %>
+  <div class="column left"><ul><li>
+      <%=link_to image_tag(item.image_path, :alt=>item.name), item.url, :target => '_blank' %>
+  </li></ul></div>
+<% end %>
