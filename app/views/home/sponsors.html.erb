@@ -34,112 +34,33 @@
   <div class="clear">
   </div>
   <h3 class="titles-full">Gold Sponsors</h3>
+<% @sponsors.find_all{|item| item.level == :gold }.each do |item| %>
   <div class="column left sponsor">
     <p>
-<%#      <a href="http://www.microsoft.com", target="_blank"> %>
-        <%#= image_tag "sponsor.jpg", :alt => "Microsoft" %>
-<%#   </a> %>
+      <%=link_to image_tag(item.image_path, :alt=>item.name), item.url, :target => '_blank' %>
     </p>
   </div>
-  <div class="column left sponsor">
-    <p>
-<%#      <a href="http://www.headspring.com", target="_blank">
-        <img src = "/assets/headspring.jpg", alt="Headspring"/>
-      </a> %>
-    </p>
-  </div>
-  <div class="column left sponsor">
-    <p>
-<%#      <a href="http://www.componentone.com", target="_blank">
-        <img src = "/assets/componentone.jpg", alt = "ComponentOne" />
-      </a> %>
-    </p>
-  </div>
+<% end %>
   <p>
   </p>
-  <div class="clear">
-  </div>
+  <div class="clear"></div>
   <h3 class="titles-full">Silver Sponsors</h3>
+<% @sponsors.find_all{|item| item.level == :silver }.each do |item| %>
   <div class="column left sponsor">
     <p>
-<%#      <a href="http://www.telerik.com", target="_blank">
-        <img src = "/assets/telerik.png", alt = "Telerik"/>
-      </a> %>
+      <%=link_to image_tag(item.image_path, :alt=>item.name), item.url, :target => '_blank' %>
     </p>
   </div>
-  <div class="column left sponsor">
-    <p>
-<%#      <a href="http://www.tekpub.com", target="_blank">
-        <img src = "/assets/tekpub.jpeg"/>
-      </a> %>
-    </p>
-  </div>
-  <div class="column left sponsor">
-    <p>
-<%#      <a href="http://www.pluralsight.com", target="_blank">
-        <img src = "/assets/pluralsight.png"/>
-      </a> %>
-    </p>
-  </div>
-  <div class="column left sponsor">
-    <p>
-<%#      <a href="http://www.snapstream.com", target="_blank">
-        <img src = "/assets/snapstream.png"/>
-      </a> %>
-    </p>
-  </div>
+<% end %>
   <p>
   </p>
-  <div class="clear">
-  </div>
+  <div class="clear"></div>
   <h3 class="titles-full">Special Thanks</h3>
+<% @sponsors.find_all{|item| item.level == :special }.each do |item| %>
   <div class="column left sponsor">
     <p>
-<%#      <a href="http://github.com", target="_blank">
-        <img src = "/assets/github.png", alt = "Github"/>
-      </a> %>
+      <%=link_to image_tag(item.image_path, :alt=>item.name), item.url, :target => '_blank' %>
     </p>
   </div>
-  <div class="column left sponsor">
-    <p>
-<%#      <a href="http://pragprog.com", target="_blank">
-        <img src = "/assets/pragprog.png", alt = "The Pragmatic Bookshelf"/>
-      </a> %>
-    </p>
-  </div>
-  <div class="column left sponsor">
-    <p>
-<%#      <a href = "http://codeschool.com", :target =>"_blank">
-        <img src = "/assets/code_school.png", alt = "Code School" />
-      </a> #>
-    </p>
-  </div>
-  <div class="column left sponsor">
-    <p>
-<%#      <a href="http://oreilly.com", target="_blank">
-        <img src = "/assets/oreilly.png", alt = "O'Reilly"/>
-      </a> %>
-    </p>
-  </div>
-  <div class="column left sponsor">
-    <p>
-<%#      <a href="http://manning.com", target="_blank">
-        <img src="/assets/manning.png", alt = "Manning Publications" />
-      </a> %>
-    </p>
-  </div>
-  <div class="column left sponsor">
-    <p>
-<%#      <a href="http://chaione.com", target="_blank">
-        <img src="/assets/chaione.png", alt = "ChaiONE" />
-      </a> %>
-    </p>
-  </div>
-  <div class="column left sponsor">
-    <p>
-<%#      <a href="http://logicnp.com", target="_blank">
-        <img src="/assets/logicnp.jpeg", alt = "LogicNP Software" />
-      </a> %>
-    </p>
-  </div>
+<% end %>
 </div>
