@@ -11,12 +11,10 @@ class UserSessionsController < ApplicationController
 
   def create
     auth = request.env['omniauth.auth']
-    #Rails.logger.info "AUTH ==> #{auth}"
+    Rails.logger.info "AUTH ==> #{auth}"
 
-    nick = auth['user_info']['nickname']
-    Rails.logger.info "nick = #{nick}"
+    nick = auth['info']['nickname']
     user = User.where(:nickname => nick, :provider => 'twitter').first
-    Rails.logger.info "user = #{user}"
     unless user
       render :file => "#{Rails.root}/public/401.html", :status => :unauthorized
       return
