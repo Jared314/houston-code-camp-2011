@@ -11,8 +11,6 @@ class UserSessionsController < ApplicationController
 
   def create
     auth = request.env['omniauth.auth']
-    Rails.logger.info "AUTH ==> #{auth}"
-
     nick = auth['info']['nickname']
     user = User.where(:nickname => nick, :provider => 'twitter').first
     unless user
