@@ -1,0 +1,25 @@
+<h2>Session Suggestions</h2>
+
+<table class="session_suggestions">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Abstract</th>
+      <th>Bio</th>
+      <th>Contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%- @session_suggestions.each do |s| %>
+      <tr>
+        <td style="width:15%"><%= s.title %></td>
+        <td><%= s.abstract %></td>
+        <td><%= s.bio %></td>
+        <td>
+          <p>twitter: <%= s.twitter %></p>
+          <p>email: <%= s.email %></p>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
