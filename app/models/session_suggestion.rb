@@ -4,5 +4,8 @@ class SessionSuggestion < ActiveRecord::Base
   validates_presence_of :title
   validates_presence_of :bio
   validates_presence_of :abstract
-  validates_presence_of :email
+  
+  validates :email, :presence => true, 
+              :length => {:minimum => 3, :maximum => 254},                    
+              :format => {:with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i}       
 end
