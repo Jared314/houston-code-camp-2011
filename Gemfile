@@ -17,8 +17,6 @@ group :assets do
 end
 gem 'jquery-rails'
 
-
-
 gem 'haml'
 gem 'dynamic_form'
 gem 'omniauth'
@@ -33,10 +31,9 @@ group :production do
 end
 
 group :test do
-
-  # Pretty printed test output
   gem 'turn', :require => false
   gem 'rspec-rails'
-  #gem 'capybara-webkit'
+  gem 'shoulda-matchers'
   gem 'rake'
+  gem "capybara", ">= 1.1.2"
 end
