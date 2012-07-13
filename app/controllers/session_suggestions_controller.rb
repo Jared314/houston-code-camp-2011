@@ -1,4 +1,9 @@
 class SessionSuggestionsController < ApplicationController
+  before_filter :authenticate, :only => [:index]
+
+  def index
+    @session_suggestions = SessionSuggestion.all
+  end
 
   def new
     @session_suggestion = SessionSuggestion.new
@@ -16,4 +21,11 @@ class SessionSuggestionsController < ApplicationController
     end
   end
 
+  protected
+
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password|
+      username == "admin" && password == "starpizza"
+    end
+  end
 end

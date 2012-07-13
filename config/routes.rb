@@ -4,7 +4,7 @@ HoustonCodeCamp2011::Application.routes.draw do
   resources :users
   resources :speakers
   resources :sessions
-  resources :session_suggestions, :only => [:new, :create]
+  resources :session_suggestions, :only => [:new, :create, :index]
 
   #custom session routes
   match '/session/assign' => 'sessions#assign_slot', :method => :post
