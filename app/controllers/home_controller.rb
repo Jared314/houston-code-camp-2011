@@ -33,8 +33,8 @@ class HomeController < ApplicationController
   def get_sponsors
     [
       # Gold
+      Sponsor.new({:name => 'Microsoft', :url => 'http://www.microsoft.com', :image_path => 'sponsor.jpg', :level => :gold}),
       Sponsor.new({:name => 'Kendo UI', :url => 'http://www.kendoui.com', :image_path => 'Kendo-logo-120x67.png', :level => :gold}),
-      #Sponsor.new({:name => 'Microsoft', :url => 'http://www.microsoft.com', :image_path => 'sponsor.jpg', :level => :gold}),
       #Sponsor.new({:name => 'Headspring', :url => 'http://www.headspring.com', :image_path => 'headspring.jpg', :level => :gold}),
       #Sponsor.new({:name => 'ComponentOne', :url => 'http://www.componentone.com', :image_path => 'componentone.jpg', :level => :gold}),
 
