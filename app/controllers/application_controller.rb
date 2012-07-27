@@ -17,6 +17,6 @@ class ApplicationController < ActionController::Base
   end
 
   def looking_for_speakers?
-    true
+    false
   end
 end
