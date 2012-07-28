@@ -9,6 +9,6 @@ module SpeakersHelper
     return if speaker.twitter_handle == nil 
     return if speaker.twitter_handle.length == 0
 
-    return link_to "@" + speaker.twitter_handle, "http://twitter/" + speaker.twitter_handle
+    return link_to "@" + speaker.twitter_handle, "http://www.twitter.com/" + speaker.twitter_handle
   end
 end
