@@ -6,3 +6,4 @@ tmp/
 config/twitter.yml
 db/seeds.rb
 .DS_Store
+tags

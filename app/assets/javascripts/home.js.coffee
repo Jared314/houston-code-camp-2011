@@ -5,13 +5,14 @@
 draggable_options = {
     appendTo: "body",
     cursor:   "move"
-    #snap:     $(".ui-droppable"),
-    revert:   "invalid"
+    snap:     $(".ui-droppable"),
+    revert:   "invalid",
+    cursorAt: { top: -40, left: -40 }
 }
 
 $ ->
   $(".draggablesessionblock").draggable draggable_options
-  
+
   $(".slot").droppable({
     accept:       ".draggablesessionblock",
     activeClass:  "dropactive",
