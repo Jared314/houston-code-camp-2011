@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
     @sponsors = get_sponsors
+    @news = get_news
   end
 
   def registration
@@ -54,6 +55,13 @@ class HomeController < ApplicationController
       #Sponsor.new({:name => 'ChaiONE', :url => 'http://www.chaione.com', :image_path => 'chaione.png', :level => :special}),
       #Sponsor.new({:name => 'LogicNP Software', :url => 'http://www.logicnp.com', :image_path => 'logicnp.jpg', :level => :special})
     ]    
+  end
+
+  def get_news
+    [
+      NewsItem.new({:date => 'Mar 8th, 2012', :body => 'Planning for the 2012 Houston Code Camp has begun. Check back here for the latest news.'}),
+      NewsItem.new({:date => 'July 10th, 2012', :body => 'The date is now finalized <br/>for Saturday August 25th, 2012. Mark your calendars!'}),
+    ]
   end
 
 end

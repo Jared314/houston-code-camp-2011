@@ -11,14 +11,12 @@
           </span>
         </p>
         <h3 class="titles">Latest News</h3>
+        <% @news.each do |item| %>
         <p>
-          <strong>Mar 8th, 2012 -</strong>
-          Planning for the 2012 Houston Code Camp has begun. Check back here for the latest news.
+          <strong><%=item.date %> -</strong>
+          <%=item.body.html_safe %>
         </p>
-        <p>
-          <strong>July 10th, 2012 -</strong>
-          The date is now finalized <br/>for Saturday August 25th, 2012. Mark your calendars!
-        </p>
+        <% end %>
         <!-- %a.btn-schedule{:href => "/schedule"} View the Official SCHEDULE -->
         <!-- %a.btn-schedule{:href => "http://houstoncodecamp.uservoice.com/"} CALL FOR SPEAKERS! -->
       </div>
