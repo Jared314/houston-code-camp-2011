@@ -11,19 +11,11 @@ class HomeController < ApplicationController
   end
 
   def schedule
-  	sessions = Session.all
     @slots = {}
-    @unassigned_sessions = []
-    sessions.each do |session|
-      if session.slot_key == nil
-        @unassigned_sessions << session
-      else
-        @slots[session.slot_key] = [] if @slots[session.slot_key] == nil
-        @slots[session.slot_key] << session
-      end
+    Session.assigned.each do |session|
+      @slots[session.slot_key] = [] if @slots[session.slot_key] == nil
+      @slots[session.slot_key] << session
     end
-
-    @unassigned_sessions.sort! {|a,b| b.votes.to_i <=> a.votes.to_i }
   end
 
   def sponsors

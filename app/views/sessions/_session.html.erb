@@ -1,7 +1,7 @@
 <div class="session">
-  <h3><%= session.name %></h3>
+  <h3><%= link_to session.name, session %></h3>
   <p><strong><%= link_to session.speaker.name, session.speaker %></strong></p>
-  <p><%= Redcarpet.new(session.abstract).to_html.html_safe %></p>
+  <p><%= markdown(session.abstract) %></p>
   <% if logged_in? %>
     <%= link_to "Edit Session", edit_session_path(session), :class => 'clean-gray-button' %>
   <% end %>
