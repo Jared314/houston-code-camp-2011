@@ -22,6 +22,10 @@ class HomeController < ApplicationController
     @sponsors = get_sponsors
   end
 
+  def committee
+    @members = get_members
+  end
+
     # Todo: replace with db
   def get_sponsors
     [
@@ -53,6 +57,17 @@ class HomeController < ApplicationController
     [
       NewsItem.new({:date => 'Mar 8th, 2012', :body => 'Planning for the 2012 Houston Code Camp has begun. Check back here for the latest news.'}),
       NewsItem.new({:date => 'July 10th, 2012', :body => 'The date is now finalized <br/>for Saturday August 25th, 2012. Mark your calendars!'}),
+    ]
+  end
+
+  def get_members
+    [
+      Member.new({:name => 'Ben Scheirman', :title => 'Lead Organizer', :description => 'I\'m the Director of Development at <a href="http://chaione.com/">ChaiONE</a> in Houston, TX.  I write software with my bare hands.', :blog => 'http://flux88.com/', :twitter => 'subdigital', :image_path => 'committee/ben.jpg'}),
+      Member.new({:name => 'Peter Seale', :title => 'Vice Chancellor', :description => 'I like to break the build and apologize for TFS.', :blog => 'http://www.pseale.com/blog', :twitter => 'pseale', :image_path => 'committee/peterseale.jpg'}),
+      Member.new({:name => 'Jared Lobberecht', :title => 'Website', :description => 'I can\'t wait until I can buy coffee with bitcoins.', :blog => 'http://blog.lobberecht.com', :twitter => 'jared314', :image_path => 'committee/jared.jpg'}),
+      Member.new({:name => 'Jonathan Birkholz', :title => 'Website', :description => '', :blog => '', :twitter => 'rookieone', :image_path => nil}),
+      Member.new({:name => 'Jason Awbrey', :title => 'Captain Cash', :description => 'I\'m a board member of the North Houston .NET User Group.  I also like to count one dollar bills.', :blog => nil, :twitter => nil, :image_path => nil}),
+      Member.new({:name => 'Brandi', :title => 'Website Designer', :description => 'While I can be credited for designing and doing front-end coding for the Code Camp site, I must admit that I wasted too much of my life reading comic books rather than learning about big shot development.', :blog => 'http://www.brandius.net', :twitter => 'brandius', :image_path => 'committee/brandi.jpg'}),
     ]
   end
 
