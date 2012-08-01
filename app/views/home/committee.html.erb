@@ -2,7 +2,7 @@
       <ul class="comm-list">
         <% @members.each do |item| %>
         <li>
-          <%=image_tag ((not item.image_path.blank?) ? item.image_path : "committee/no-photo.jpg") %>
+          <%=image_tag item.image_path %>
           <div class="details">
             <h3><%=item.name %><% if not item.title.blank? %> - <%=item.title %><% end %></h3>
             <p><%=item.description.html_safe %></p>

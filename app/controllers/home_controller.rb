@@ -23,7 +23,19 @@ class HomeController < ApplicationController
   end
 
   def committee
-    @members = get_members
+
+    @members = get_members.map do |item|
+      Class.new do
+        class << self; attr_accessor :image_path, :name, :title, :description, :blog, :twitter end
+        @image_path = ((not item.image_path.blank?) ? item.image_path : "committee/no-photo.jpg")
+        @name = item.name
+        @title = item.title
+        @description = item.description
+        @blog = item.blog
+        @twitter = item.twitter
+      end
+    end
+    
   end
 
     # Todo: replace with db
