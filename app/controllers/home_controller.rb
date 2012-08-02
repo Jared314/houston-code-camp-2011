@@ -75,6 +75,7 @@ class HomeController < ApplicationController
   def get_members
     [
       Member.new({:name => 'Ben Scheirman', :title => 'Lead Organizer', :description => 'I\'m the Director of Development at <a href="http://chaione.com/">ChaiONE</a> in Houston, TX.  I write software with my bare hands.', :blog => 'http://flux88.com/', :twitter => 'subdigital', :image_path => 'committee/ben.jpg'}),
+      Member.new({:name => 'Greg Major', :title => 'Vice Chancellor', :description => 'My bio is licensed under a Creative Commons Attribution 3.0 Unported License. I\'m pretty sure that means I get free beer now.', :blog => 'http://blog.gregmajor.com/', :twitter => 'gregmajor', :image_path => nil}),
       Member.new({:name => 'Peter Seale', :title => 'Vice Chancellor', :description => 'I like to break the build and apologize for TFS.', :blog => 'http://www.pseale.com/blog', :twitter => 'pseale', :image_path => 'committee/peterseale.jpg'}),
       Member.new({:name => 'Jared Lobberecht', :title => 'Website', :description => 'I can\'t wait until I can buy coffee with bitcoins.', :blog => 'http://blog.lobberecht.com', :twitter => 'jared314', :image_path => 'committee/jared.jpg'}),
       Member.new({:name => 'Jonathan Birkholz', :title => 'Website', :description => '', :blog => 'http://www.birkholzcreative.com/', :twitter => 'rookieone', :image_path => nil}),
