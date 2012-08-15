@@ -50,7 +50,7 @@ class HomeController < ApplicationController
 
       #Silver
       Sponsor.new({:name => 'ChaiONE', :url => 'http://chaione.com/', :image_path => 'chaione2012.png', :level => :silver}),
-      #Sponsor.new({:name => 'Tekpub', :url => 'http://www.tekpub.com', :image_path => 'tekpub.jpg', :level => :silver}),
+      Sponsor.new({:name => 'Improving Enterprises', :url => 'http://www.improvingenterprises.com/', :image_path => 'improving-logo.png', :level => :silver}),
       #Sponsor.new({:name => 'Pluralsight', :url => 'http://www.pluralsight.com', :image_path => 'pluralsight.png', :level => :silver}),
       #Sponsor.new({:name => 'Snapstream', :url => 'http://www.snapstream.com', :image_path => 'snapstream.png', :level => :silver}),
 
