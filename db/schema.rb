@@ -19,16 +19,16 @@ ActiveRecord::Schema.define(:version => 20120713175919) do
     t.text     "bio"
     t.string   "twitter"
     t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "sessions", :force => true do |t|
     t.string   "name"
     t.text     "abstract"
     t.integer  "speaker_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.string   "slot_key"
     t.integer  "votes"
   end
@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(:version => 20120713175919) do
     t.string   "name"
     t.text     "bio"
     t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
     t.string   "twitter_handle"
   end
 
@@ -47,8 +47,8 @@ ActiveRecord::Schema.define(:version => 20120713175919) do
     t.string   "uid"
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.string   "token"
     t.string   "nickname"
   end
